@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_Glowing_Fantasy_Plant_2029
+  m_Shader: {fileID: 4800000, guid: 8110988c779f4ac6b8bdac4732b6e7bf, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - _WINDENABLE_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: b13a9000024d319439618113cdd806cd, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 6068d95cb2629d743a75ba086541948f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AOSoftness: 0.05
+    - _AOThreshold: 0
+    - _AmbientShade: 0.105
+    - _BumpScale: 0.6
+    - _LightColorAmount: 0
+    - _NormalInRamp: 0.3
+    - _OutlineWidth: 0.004
+    - _ReliefAmount: 0
+    - _ReliefSteps: 3
+    - _RimInShadow: 0.6
+    - _RimMax: 0.84
+    - _RimMin: 0.78
+    - _RimStrength: 0.25
+    - _ShadowBlur: 1.5
+    - _ShadowFormLift: 0.45
+    - _Softness: 0.053
+    - _Threshold: 0.393
+    - _WindEnable: 1
+    - _WindFreq: 0.35
+    - _WindSpeed: 1.6
+    - _WindStrength: 0.05
+    m_Colors:
+    - _AOColor: {r: 0.34999996, g: 0.29999998, b: 0.24999997, a: 1}
+    - _LitColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineColor: {r: 0.12, g: 0.1, b: 0.25, a: 1}
+    - _RimColor: {r: 0.35, g: 0.4, b: 0.7, a: 1}
+    - _ShadowColor: {r: 0.62, g: 0.6, b: 0.82, a: 1}
+    - _WindDir: {r: 1, g: 0, b: 0.35, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: mat_crop_lanternfruit_leaf
+  m_Shader: {fileID: 4800000, guid: d13635ee98467a54fa55d01155424223, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _PaintMap:
+        m_Texture: {fileID: 2800000, guid: b3dc93157c87b2642a96143d4cf52f37, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AmbientShade: 0.105
+    - _BackFaceDarken: 0.35
+    - _BacklightPower: 4
+    - _BacklightStrength: 0.6
+    - _Brightness: 0.86
+    - _ClumpHueVar: 0.01
+    - _ClumpValueVar: 0.05
+    - _Contrast: 0
+    - _Cutoff: 0.5
+    - _Desaturation: -0.27
+    - _EdgeShrink: 0
+    - _EdgeShrinkMin: 0.35
+    - _EdgeStrength: 0.5
+    - _EdgeWidth: 0.2
+    - _Flutter: 0.004
+    - _FlutterSpeed: 4
+    - _GroundBlend: 0
+    - _GroundBlendCardShade: 0.15
+    - _GroundBlendHeight: 0.35
+    - _HueShift: 0
+    - _NormalUp: 0.5
+    - _PaintStrength: 1
+    - _PatchAmount: 0.5
+    - _PatchScale: 0.25
+    - _PushStrength: 0.6
+    - _ReceiveShadowBias: 0.03
+    - _RootErode: 0
+    - _RootErodeHeight: 0.18
+    - _RootSink: 0
+    - _ShadowBlur: 1.5
+    - _SheenLean: 0.8
+    - _SheenPower: 12
+    - _SheenStrength: 0.35
+    - _SheenThreshold: 0.55
+    - _ShinePower: 3
+    - _ShineStrength: 0.15
+    - _Softness: 0.053
+    - _Threshold: 0.393
+    - _TipGlow: 0
+    - _TipGlowStart: 0.65
+    - _TransStrength: 0.4
+    - _TransThreshold: 0.6
+    - _VeinStrength: 0.6
+    - _VeinTaper: 0.7
+    - _VeinWidth: 0.028
+    - _Volume: 0.3
+    - _VolumeHeightScale: 0.4
+    - _WindColorAmount: 0.25
+    - _WindColorScale: 0.35
+    - _WindColorSoftness: 0.04
+    - _WindColorSpeed: 1.2
+    - _WindColorThreshold: 0.57
+    - _WindFreq: 0.35
+    - _WindSpeed: 1.6
+    - _WindStrength: 0.02
+    m_Colors:
+    - _BacklightColor: {r: 0.54901963, g: 0.7019608, b: 1, a: 1}
+    - _EdgeColor: {r: 0.4509804, g: 0.4509804, b: 0.8, a: 1}
+    - _EdgeShrinkRange: {r: 0.1, g: 0.6, b: 0, a: 0}
+    - _PatchTint: {r: 0.9098039, g: 0.9411765, b: 1, a: 1}
+    - _RootColor: {r: 0.023529412, g: 0.043137256, b: 0.16078432, a: 1}
+    - _RootErodeScale: {r: 55, g: 9, b: 0, a: 0}
+    - _ShadowTint: {r: 0.16470589, g: 0.18431373, b: 0.43137255, a: 1}
+    - _SheenColor: {r: 1, g: 1, b: 0.85, a: 1}
+    - _ShineColor: {r: 0.48235294, g: 0.627451, b: 1, a: 1}
+    - _Tint: {r: 1, g: 1, b: 1, a: 1}
+    - _TipColor: {r: 0.2, g: 0.34117648, b: 0.9098039, a: 1}
+    - _TipGlowColor: {r: 0.35, g: 0.5, b: 1.6, a: 1}
+    - _TransColor: {r: 0.9, g: 1, b: 0.45, a: 1}
+    - _VeinColor: {r: 0.54901963, g: 0.6, b: 0.9490196, a: 1}
+    - _WindColor: {r: 0.2784314, g: 0.46666667, b: 0.8627451, a: 1}
+    - _WindDir: {r: 1, g: 0, b: 0.35, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

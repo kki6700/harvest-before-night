@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_LakeWater
+  m_Shader: {fileID: 4800000, guid: 76e685eb86fbe354ead16383a3211633, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _CausticMap:
+        m_Texture: {fileID: 2800000, guid: 7cabe7eaccfa451db3db1cf9659f5a6e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaDeep: 0.96
+    - _AlphaShore: 0.47085047
+    - _BankShade: 0.5
+    - _BedShadow: 1
+    - _CausticDepth: 1.6
+    - _CausticFadeIn: 0.12
+    - _CausticFadePower: 1.8
+    - _CausticFineFar: 25
+    - _CausticFineNear: 6
+    - _CausticFineWeight: 0.6
+    - _CausticGain: 3
+    - _CausticPatch: 0.55
+    - _CausticScale: 1.2
+    - _CausticStrength: 0.7
+    - _CausticTiling: 0.25
+    - _CausticTilingFine: 0.9
+    - _CausticWidth: 0.06
+    - _DebugTime: -1
+    - _DepthMax: 2
+    - _FoamBreath: 0.3
+    - _FoamEmission: 0.020850481
+    - _FoamWaveBreak: 0.4
+    - _FoamWaveReach: 0.5
+    - _FoamWaveSpeed: 0.18
+    - _FoamWaveWidth: 0.05
+    - _FoamWaves: 0
+    - _FoamWidth: 0.025
+    - _FresnelPower: 4
+    - _FresnelStrength: 0.7
+    - _GlintCluster: 0.6
+    - _GlintClusterScale: 0.12
+    - _GlintEmission: 0.31255144
+    - _GlintFadeDepth: 0.15
+    - _GlintScale: 1.5
+    - _GlintSize: 0.16
+    - _GlintSizeRandom: 0.7
+    - _GlintSmooth: 0.6
+    - _Parallax: 0.35
+    - _PathCustom: 0
+    - _PathGlintBoost: 1.5
+    - _PathPower: 60
+    - _PathStrength: 0.641701
+    - _PathWobble: 0.18
+    - _ReceiveLight: 0.6
+    - _Refraction: 0.012
+    - _RimGlowMax: 1.4
+    - _RimGlowMin: 0.5
+    - _RimGlowPeriod: 6
+    - _RimStrength: 0
+    - _RingMix: 0.03
+    - _RingScale: 0.35
+    - _WSpeed: 0.08
+    - _WarpMix: 0.05
+    - _WarpScale: 0.25
+    - _WaterLevel: -0.12
+    m_Colors:
+    - _CausticColor: {r: 0.62, g: 0.9, b: 1, a: 1}
+    - _CausticSpeed1: {r: 0.03, g: 0.012, b: 0, a: 0}
+    - _CausticSpeed2: {r: -0.018, g: 0.024, b: 0, a: 0}
+    - _DeepColor: {r: 0.054170094, g: 0.29497942, b: 0.46663922, a: 1}
+    - _FoamColor: {r: 0.95, g: 1, b: 0.9916598, a: 1}
+    - _GlintColorA: {r: 0.97085047, g: 0.9791495, b: 0.93744856, a: 1}
+    - _GlintColorB: {r: 0.8708505, g: 1, b: 0.9791495, a: 1}
+    - _PathColor: {r: 1, g: 0.9666392, b: 0.88744855, a: 1}
+    - _PathDir: {r: 0, g: 0.3, b: -1, a: 0}
+    - _RingCenter: {r: 0, g: 0, b: -47, a: 0}
+    - _ShoreColor: {r: 0.37919065, g: 0.72995883, b: 0.8208093, a: 1}
+    - _SkyColor: {r: 0.61255145, g: 0.7708505, b: 0.9549794, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

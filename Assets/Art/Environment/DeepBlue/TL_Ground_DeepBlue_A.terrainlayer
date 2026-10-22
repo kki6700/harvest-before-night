@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1953259897 &8574412962073106934
+TerrainLayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TL_Ground_DeepBlue_A
+  m_DiffuseTexture: {fileID: 2800000, guid: eb5efe2855ad773499688514a7f6ab99, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: 44bbeadfd5d9d2a47b1ebbf88d8587b9, type: 3}
+  m_MaskMapTexture: {fileID: 2800000, guid: 582b641a8bec80c42a25333d1858068c, type: 3}
+  m_TileSize: {x: 7, y: 7}
+  m_TileOffset: {x: 0, y: 0}
+  m_Specular: {r: 0, g: 0, b: 0, a: 0}
+  m_Metallic: 0
+  m_Smoothness: 0
+  m_NormalScale: 1
+  m_DiffuseRemapMin: {x: 0, y: 0, z: 0, w: 0}
+  m_DiffuseRemapMax: {x: 1, y: 1, z: 1, w: 1}
+  m_MaskMapRemapMin: {x: 0, y: 0, z: 0, w: 0}
+  m_MaskMapRemapMax: {x: 1, y: 1, z: 1, w: 1}
+  m_SmoothnessSource: 1

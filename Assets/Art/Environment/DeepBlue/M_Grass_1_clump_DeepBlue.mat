@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_Grass_1_clump_DeepBlue
+  m_Shader: {fileID: 4800000, guid: 2bbbfbe3a2b04da448cc9a48130434b9, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses:
+  - SHADOWCASTER
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: ed91b2bacc3f8384aa083e4f75689a9f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AmbientShade: 0.105
+    - _Brightness: 1
+    - _ClumpHueVar: 0.025
+    - _ClumpValueVar: 0.1
+    - _Contrast: 0
+    - _Cutoff: 0.5
+    - _Desaturation: -0.35
+    - _EdgeShrink: 1
+    - _EdgeShrinkMin: 0.35
+    - _GroundBlend: 1
+    - _GroundBlendCardShade: 0.15
+    - _GroundBlendHeight: 0.5
+    - _HueShift: 0
+    - _PatchAmount: 0.5
+    - _PatchScale: 0.25
+    - _PushStrength: 0.6
+    - _RootErode: 0.45
+    - _RootErodeHeight: 0.12
+    - _RootSink: 0.01
+    - _ShadowBlur: 1.5
+    - _SheenLean: 0.8
+    - _SheenPower: 12
+    - _SheenStrength: 0.35
+    - _SheenThreshold: 0.55
+    - _ShinePower: 3
+    - _ShineStrength: 0.25
+    - _Softness: 0.053
+    - _Threshold: 0.393
+    - _TipGlow: 0
+    - _TipGlowStart: 0.65
+    - _TransStrength: 0.4
+    - _TransThreshold: 0.6
+    - _Volume: 0.35
+    - _VolumeHeightScale: 0.6
+    - _WindColorAmount: 0.4
+    - _WindColorScale: 0.22
+    - _WindColorSoftness: 0.15
+    - _WindColorSpeed: 1.2
+    - _WindColorThreshold: 0.52
+    - _WindFade: 10
+    - _WindFreq: 0.35
+    - _WindRadius: 25
+    - _WindSpeed: 1.6
+    - _WindStrength: 0.12
+    m_Colors:
+    - _EdgeShrinkRange: {r: 0.1, g: 0.6, b: 0, a: 0}
+    - _PatchTint: {r: 0.9098039, g: 0.9411765, b: 1, a: 1}
+    - _RootColor: {r: 0.075794466, g: 0.12545638, b: 0.3561455, a: 1}
+    - _RootErodeScale: {r: 55, g: 9, b: 0, a: 0}
+    - _ShadowTint: {r: 0.16470589, g: 0.18431373, b: 0.43137255, a: 1}
+    - _SheenColor: {r: 0.70191234, g: 0.69807154, b: 1, a: 1}
+    - _ShineColor: {r: 0.81725705, g: 0.83724684, b: 1, a: 1}
+    - _Tint: {r: 1, g: 1, b: 1, a: 1}
+    - _TipColor: {r: 0.1843121, g: 0.41147858, b: 1, a: 1}
+    - _TipGlowColor: {r: 0.35, g: 0.5, b: 1.6, a: 1}
+    - _TransColor: {r: 0.7254902, g: 0.78431374, b: 1, a: 1}
+    - _WindColor: {r: 0.5917748, g: 0.6111622, b: 1, a: 1}
+    - _WindDir: {r: 1, g: 0, b: 0.35, a: 0}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

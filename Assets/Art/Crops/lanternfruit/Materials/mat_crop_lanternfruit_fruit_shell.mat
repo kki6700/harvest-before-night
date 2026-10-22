@@ -1,0 +1,98 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: mat_crop_lanternfruit_fruit_shell
+  m_Shader: {fileID: 4800000, guid: 2902d53151f76d94587dd88a0c1e4390, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 55dd1c3a9fc40334b83b47f67229252b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCentre: 0.38
+    - _AlphaEdge: 0.92
+    - _AlphaPower: 1.8
+    - _AmbientShade: 0.105
+    - _BumpScale: 1
+    - _FurFuzz: 0
+    - _GlowInShadow: 1
+    - _GlowPower: 2.2
+    - _GlowRadius: 0.6
+    - _GlowStrength: 0.45
+    - _GlowViewMix: 1
+    - _GlowWide: 0.25
+    - _GlowWideRadius: 0.9
+    - _HaloPower: 2.5
+    - _HaloSize: 0.18
+    - _HaloStrength: 0
+    - _IriBands: 1
+    - _IriMax: 1
+    - _IriMin: 0.62
+    - _IriStrength: 0.9
+    - _LightColorAmount: 0
+    - _MouthLineWidth: 0.007
+    - _MouthOpen: 0
+    - _MouthSize: 0
+    - _MouthSmile: 0
+    - _OutlineWidth: 0.004
+    - _PulseAmount: 0.18
+    - _PulseSpeed: 0.35
+    - _RayAmount: 0.25
+    - _RayCount: 0
+    - _RaySharpness: 1.5
+    - _RaySpin: 0.02
+    - _RimInShadow: 0.6
+    - _RimLineMax: 0.86
+    - _RimLineMin: 0.8
+    - _RimLineStrength: 0
+    - _RimMax: 0.82
+    - _RimMin: 0.78
+    - _RimStrength: 0.18
+    - _ShadowBlur: 1.5
+    - _ShadowFormLift: 0.45
+    - _Softness: 0.053
+    - _Threshold: 0.393
+    - _TuftContrast: 1.4
+    - _TuftHeight: 0
+    - _TuftSize: 0.06
+    m_Colors:
+    - _FurScale: {r: 26.9, g: 32.3, b: 6.17, a: 0}
+    - _GlowCentre: {r: 0, g: 0, b: -0.58, a: 0}
+    - _GlowColor: {r: 1, g: 0.6, b: 0.78, a: 1}
+    - _GlowOuterColor: {r: 1, g: 0.75, b: 0.55, a: 1}
+    - _HaloColor: {r: 1, g: 0.7, b: 0.85, a: 1}
+    - _IriColorA: {r: 0.3, g: 0.95, b: 1, a: 1}
+    - _IriColorB: {r: 1, g: 0.35, b: 0.8, a: 1}
+    - _LitColor: {r: 1.08, g: 1.02, b: 0.96, a: 1}
+    - _MouthCenter: {r: 0, g: 0.036, b: 0, a: 0}
+    - _MouthInsideColor: {r: 0.77, g: 0.58, b: 0.65, a: 1}
+    - _MouthLineColor: {r: 0.58, g: 0.50999993, b: 0.6, a: 1}
+    - _OutlineColor: {r: 0.45, g: 0.18, b: 0.22, a: 1}
+    - _RimLineColor: {r: 0.55, g: 0.35, b: 0.5, a: 1}
+    - _ShadowColor: {r: 0.82, g: 0.72, b: 0.76, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

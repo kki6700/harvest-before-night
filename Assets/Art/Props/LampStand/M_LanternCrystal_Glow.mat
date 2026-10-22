@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_LanternCrystal_Glow
+  m_Shader: {fileID: 4800000, guid: 2c4d2fe445221cc4eb5c7cedf9b5cfb1, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 7c13d4b84277a18448ee2f1a7c5cb1da, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _BreathPeriod: 4
+    - _CorePower: 1.5
+    - _EdgeDepth: 0.35
+    - _FacetHue: 0.06
+    - _Flicker: 0
+    - _FlickerSpeed: 7
+    - _GlowStrength: 1.2
+    - _Saturation: 1.15
+    - _ShadeAmount: 0.25
+    - _SparkleChance: 0
+    - _SparkleSpeed: 1.3
+    - _TextureMix: 0.35
+    m_Colors:
+    - _BottomColor: {r: 0.34999996, g: 0.95, b: 1, a: 1}
+    - _Breath: {r: 0.35, g: 1.5, b: 0, a: 0}
+    - _GlowColor: {r: 1.4, g: 1.3, b: 2.2, a: 1}
+    - _GradientRange: {r: -2.3, g: -0.6, b: 0, a: 0}
+    - _SparkleColor: {r: 2.5, g: 2.5, b: 3, a: 1}
+    - _TopColor: {r: 0.62, g: 0.37999994, b: 1, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

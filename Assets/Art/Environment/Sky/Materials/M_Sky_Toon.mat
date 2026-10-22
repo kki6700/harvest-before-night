@@ -1,0 +1,101 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: M_Sky_Toon
+  m_Shader: {fileID: 4800000, guid: 63ca70b28fae6aa45a62bf0b138c3d6a, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs: []
+    m_Ints: []
+    m_Floats:
+    - _BandAmount: 0.4
+    - _BandHeight: 0.08
+    - _CloudCoverage: 0.63
+    - _CloudCurve: 0.3
+    - _CloudEdge: 0.001
+    - _CloudHorizonFade: 0.12
+    - _CloudLightOffset: 0.25
+    - _CloudLitBias: 0.06
+    - _CloudOpacity: 0
+    - _CloudScale: 1.2
+    - _CloudSpeed: 1
+    - _Dither: 1
+    - _GlowAmount: 0.35
+    - _GlowPower: 10
+    - _GradientPower: 1
+    - _GroundFade: 12
+    - _HaloAmount: 0.25
+    - _HaloSize: 0.11
+    - _MidHeight: 0.3
+    - _SunBrightness: 20
+    - _SunSize: 0.045
+    - _SunsetAmount: 0.9
+    - _SunsetHeight: 0.22
+    - _SunsetSpread: 2.5
+    - _VolAmount: 1
+    - _VolBottom: 1200
+    - _VolCoverage: 0.53
+    - _VolDebugMask: 0
+    - _VolDensity: 8
+    - _VolEdge: 0.015
+    - _VolErode: 0.4
+    - _VolInnerScallop: 0
+    - _VolJitter: 0
+    - _VolLightAbsorb: 1.1
+    - _VolLightStep: 70
+    - _VolLightSteps: 3
+    - _VolLobeSize: 220
+    - _VolMaxSteps: 64
+    - _VolMorph: 0.015
+    - _VolPowder: 0.5
+    - _VolScale: 0.0014
+    - _VolScallop: 0.5
+    - _VolShadeThreshold: 0.32
+    - _VolSideFalloff: 2
+    - _VolSilver: 1
+    - _VolSilverG: 0.6
+    - _VolSkin: 80
+    - _VolStepLength: 25
+    - _VolSteps: 20
+    - _VolTop: 1900
+    m_Colors:
+    - _BandColor: {r: 0.8509804, g: 0.63529414, b: 0.8156863, a: 1}
+    - _CloudLitColor: {r: 1, g: 1, b: 1, a: 1}
+    - _CloudShadowColor: {r: 1, g: 1, b: 1, a: 1}
+    - _CloudWind: {r: 0.012, g: 0.004, b: 0, a: 0}
+    - _GroundColor: {r: 0.6117647, g: 0.47058824, b: 0.72156864, a: 1}
+    - _HorizonColor: {r: 0.70980394, g: 0.49803922, b: 0.76862746, a: 1}
+    - _MidColor: {r: 0.35686275, g: 0.24705882, b: 0.57254905, a: 1}
+    - _OverallColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SunColor: {r: 1, g: 0.8862745, b: 0.6901961, a: 1}
+    - _SunsetColor: {r: 1, g: 0.5568628, b: 0.41960785, a: 1}
+    - _SunsetHotColor: {r: 1, g: 0.7607843, b: 0.47843137, a: 1}
+    - _VolHaze: {r: 0.03, g: 0.16, b: 0.85, a: 0}
+    - _VolHorizonFade: {r: 0, g: 0.04, b: 0, a: 0}
+    - _VolLitFar: {r: 0.96, g: 0.87, b: 0.94, a: 1}
+    - _VolLitSun: {r: 1, g: 0.83, b: 0.63, a: 1}
+    - _VolRimColor: {r: 1, g: 0.86, b: 0.6, a: 1}
+    - _VolShadowFar: {r: 0.56, g: 0.45999992, b: 0.76, a: 1}
+    - _VolShadowSun: {r: 0.78, g: 0.5, b: 0.65999997, a: 1}
+    - _VolSunSideFade: {r: 0.06, g: 0.2, b: 180, a: 30}
+    - _VolWind: {r: 8, g: 3, b: 0, a: 0}
+    - _ZenithColor: {r: 0.16470589, g: 0.12156863, b: 0.36078432, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

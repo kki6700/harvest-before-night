@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ac_crop_lanternfruit_unfurl
+  m_Controller: {fileID: 9100000, guid: b442c167049608d4fa782c59ccada894, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 5269120a11d6ef34f92b9743ce6cf94e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: affdf2e6df3184c46bd7841b151971b9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 9c2b8ac1a795b354eb73a5ede7a653dc, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 26ca490ef922f2e43a57479d8636988e, type: 2}

@@ -1,0 +1,506 @@
+[
+  {
+    "name": "character_front",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\character_front.png",
+    "source_rect": [
+      0,
+      0,
+      325,
+      545
+    ],
+    "width": 325,
+    "height": 545
+  },
+  {
+    "name": "character_side",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\character_side.png",
+    "source_rect": [
+      330,
+      0,
+      625,
+      545
+    ],
+    "width": 295,
+    "height": 543
+  },
+  {
+    "name": "character_back",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\character_back.png",
+    "source_rect": [
+      625,
+      0,
+      900,
+      545
+    ],
+    "width": 275,
+    "height": 545
+  },
+  {
+    "name": "head_front",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\head_front.png",
+    "source_rect": [
+      900,
+      20,
+      1045,
+      208
+    ],
+    "width": 145,
+    "height": 188
+  },
+  {
+    "name": "head_side",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\head_side.png",
+    "source_rect": [
+      1040,
+      20,
+      1170,
+      208
+    ],
+    "width": 130,
+    "height": 182
+  },
+  {
+    "name": "hair_front",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\hair_front.png",
+    "source_rect": [
+      1160,
+      20,
+      1355,
+      208
+    ],
+    "width": 195,
+    "height": 188
+  },
+  {
+    "name": "hair_back",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\hair_back.png",
+    "source_rect": [
+      1350,
+      20,
+      1536,
+      208
+    ],
+    "width": 186,
+    "height": 188
+  },
+  {
+    "name": "hat_under",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\hat_under.png",
+    "source_rect": [
+      905,
+      210,
+      1110,
+      408
+    ],
+    "width": 205,
+    "height": 198
+  },
+  {
+    "name": "hat_side",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\hat_side.png",
+    "source_rect": [
+      1090,
+      210,
+      1345,
+      408
+    ],
+    "width": 255,
+    "height": 190
+  },
+  {
+    "name": "hat_top",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\hat_top.png",
+    "source_rect": [
+      1340,
+      210,
+      1536,
+      408
+    ],
+    "width": 196,
+    "height": 198
+  },
+  {
+    "name": "cape_panel_left",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\cape_panel_left.png",
+    "source_rect": [
+      855,
+      410,
+      1005,
+      710
+    ],
+    "width": 150,
+    "height": 300
+  },
+  {
+    "name": "cape_front",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\cape_front.png",
+    "source_rect": [
+      965,
+      410,
+      1145,
+      525
+    ],
+    "width": 180,
+    "height": 115
+  },
+  {
+    "name": "cape_panel_center",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\cape_panel_center.png",
+    "source_rect": [
+      1090,
+      410,
+      1225,
+      610
+    ],
+    "width": 135,
+    "height": 200
+  },
+  {
+    "name": "cape_back",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\cape_back.png",
+    "source_rect": [
+      1190,
+      410,
+      1410,
+      525
+    ],
+    "width": 220,
+    "height": 115
+  },
+  {
+    "name": "cape_panel_right",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\cape_panel_right.png",
+    "source_rect": [
+      1380,
+      410,
+      1536,
+      710
+    ],
+    "width": 156,
+    "height": 300
+  },
+  {
+    "name": "outfit_front",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\outfit_front.png",
+    "source_rect": [
+      955,
+      525,
+      1195,
+      730
+    ],
+    "width": 240,
+    "height": 205
+  },
+  {
+    "name": "outfit_back",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\outfit_back.png",
+    "source_rect": [
+      1190,
+      525,
+      1435,
+      730
+    ],
+    "width": 245,
+    "height": 205
+  },
+  {
+    "name": "legs_boots_front",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\legs_boots_front.png",
+    "source_rect": [
+      845,
+      715,
+      995,
+      1000
+    ],
+    "width": 150,
+    "height": 275
+  },
+  {
+    "name": "legs_boots_three_quarter",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\legs_boots_three_quarter.png",
+    "source_rect": [
+      985,
+      715,
+      1160,
+      1000
+    ],
+    "width": 168,
+    "height": 283
+  },
+  {
+    "name": "legs_boots_side",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\legs_boots_side.png",
+    "source_rect": [
+      1150,
+      715,
+      1365,
+      1000
+    ],
+    "width": 215,
+    "height": 284
+  },
+  {
+    "name": "legs_boots_back",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\legs_boots_back.png",
+    "source_rect": [
+      1355,
+      715,
+      1536,
+      1000
+    ],
+    "width": 174,
+    "height": 283
+  },
+  {
+    "name": "staff_star_front",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\staff_star_front.png",
+    "source_rect": [
+      10,
+      545,
+      145,
+      905
+    ],
+    "width": 135,
+    "height": 360
+  },
+  {
+    "name": "staff_star_side",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\staff_star_side.png",
+    "source_rect": [
+      140,
+      545,
+      250,
+      905
+    ],
+    "width": 110,
+    "height": 360
+  },
+  {
+    "name": "staff_compass",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\staff_compass.png",
+    "source_rect": [
+      245,
+      545,
+      435,
+      735
+    ],
+    "width": 174,
+    "height": 186
+  },
+  {
+    "name": "staff_moon",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\staff_moon.png",
+    "source_rect": [
+      425,
+      545,
+      545,
+      735
+    ],
+    "width": 103,
+    "height": 189
+  },
+  {
+    "name": "bow_dark",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\bow_dark.png",
+    "source_rect": [
+      540,
+      545,
+      700,
+      705
+    ],
+    "width": 160,
+    "height": 160
+  },
+  {
+    "name": "bow_light",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\bow_light.png",
+    "source_rect": [
+      690,
+      545,
+      835,
+      705
+    ],
+    "width": 140,
+    "height": 160
+  },
+  {
+    "name": "charms_large",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\charms_large.png",
+    "source_rect": [
+      245,
+      690,
+      545,
+      825
+    ],
+    "width": 293,
+    "height": 135
+  },
+  {
+    "name": "charms_small",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\charms_small.png",
+    "source_rect": [
+      535,
+      680,
+      845,
+      825
+    ],
+    "width": 310,
+    "height": 145
+  },
+  {
+    "name": "charms_stars",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\charms_stars.png",
+    "source_rect": [
+      245,
+      815,
+      850,
+      910
+    ],
+    "width": 604,
+    "height": 95
+  },
+  {
+    "name": "hand_01",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\hand_01.png",
+    "source_rect": [
+      15,
+      905,
+      90,
+      1024
+    ],
+    "width": 75,
+    "height": 104
+  },
+  {
+    "name": "hand_02",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\hand_02.png",
+    "source_rect": [
+      80,
+      905,
+      150,
+      1024
+    ],
+    "width": 70,
+    "height": 104
+  },
+  {
+    "name": "hand_03",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\hand_03.png",
+    "source_rect": [
+      145,
+      905,
+      215,
+      1024
+    ],
+    "width": 70,
+    "height": 105
+  },
+  {
+    "name": "hand_04",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\hand_04.png",
+    "source_rect": [
+      205,
+      905,
+      275,
+      1024
+    ],
+    "width": 70,
+    "height": 105
+  },
+  {
+    "name": "hand_05",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\hand_05.png",
+    "source_rect": [
+      265,
+      905,
+      340,
+      1024
+    ],
+    "width": 75,
+    "height": 102
+  },
+  {
+    "name": "hand_06",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\hand_06.png",
+    "source_rect": [
+      330,
+      905,
+      410,
+      1024
+    ],
+    "width": 80,
+    "height": 102
+  },
+  {
+    "name": "hand_07",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\hand_07.png",
+    "source_rect": [
+      400,
+      905,
+      475,
+      1024
+    ],
+    "width": 75,
+    "height": 104
+  },
+  {
+    "name": "hand_08",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\hand_08.png",
+    "source_rect": [
+      465,
+      905,
+      540,
+      1024
+    ],
+    "width": 75,
+    "height": 104
+  },
+  {
+    "name": "hand_09",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\hand_09.png",
+    "source_rect": [
+      530,
+      905,
+      610,
+      1024
+    ],
+    "width": 80,
+    "height": 91
+  },
+  {
+    "name": "hand_10",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\hand_10.png",
+    "source_rect": [
+      600,
+      905,
+      680,
+      1024
+    ],
+    "width": 78,
+    "height": 92
+  },
+  {
+    "name": "hand_11",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\hand_11.png",
+    "source_rect": [
+      670,
+      905,
+      755,
+      1024
+    ],
+    "width": 83,
+    "height": 102
+  },
+  {
+    "name": "hand_12",
+    "file": "C:\\Users\\A\\AppData\\Local\\Comfy-Desktop\\ComfyUI-Installs\\TripoSG\\ComfyUI\\output\\Parts/PurpleWitchNamed_1790871119\\hand_12.png",
+    "source_rect": [
+      745,
+      905,
+      835,
+      1024
+    ],
+    "width": 77,
+    "height": 102
+  }
+]

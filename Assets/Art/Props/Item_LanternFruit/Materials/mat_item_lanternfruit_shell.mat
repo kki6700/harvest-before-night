@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: mat_item_lanternfruit_shell
+  m_Shader: {fileID: 4800000, guid: 2902d53151f76d94587dd88a0c1e4390, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AlphaCentre: 0.5
+    - _AlphaEdge: 1
+    - _AlphaPower: 2.5
+    - _AmbientShade: 0.105
+    - _BumpScale: 1
+    - _FurFuzz: 0
+    - _GlowInShadow: 1
+    - _GlowPower: 1.5
+    - _GlowRadius: 1.3
+    - _GlowStrength: 1.3
+    - _GlowViewMix: 0.2
+    - _GlowWide: 0.7
+    - _GlowWideRadius: 2.2
+    - _HaloPower: 2.5
+    - _HaloSize: 0.35
+    - _HaloStrength: 0.9
+    - _LightColorAmount: 0
+    - _MouthLineWidth: 0.007
+    - _MouthOpen: 0
+    - _MouthSize: 0
+    - _MouthSmile: 0
+    - _OutlineWidth: 0.004
+    - _PulseAmount: 0.18
+    - _PulseSpeed: 0.35
+    - _RayAmount: 0.25
+    - _RayCount: 8
+    - _RaySharpness: 1.5
+    - _RaySpin: 0.02
+    - _RimInShadow: 0.6
+    - _RimLineMax: 0.86
+    - _RimLineMin: 0.8
+    - _RimLineStrength: 0.85
+    - _RimMax: 0.82
+    - _RimMin: 0.78
+    - _RimStrength: 0.18
+    - _ShadowBlur: 1.5
+    - _ShadowFormLift: 0.45
+    - _Softness: 0.053
+    - _Threshold: 0.393
+    - _TuftContrast: 1.4
+    - _TuftHeight: 0
+    - _TuftSize: 0.06
+    m_Colors:
+    - _FurScale: {r: 26.9, g: 32.3, b: 6.17, a: 0}
+    - _GlowCentre: {r: 0, g: -1.015, b: 0, a: 0}
+    - _GlowColor: {r: 1, g: 0.8117647, b: 0.5411765, a: 1}
+    - _GlowOuterColor: {r: 0.7882353, g: 0.69803923, b: 1, a: 1}
+    - _HaloCentre: {r: 0, g: 0, b: -1.12, a: 0}
+    - _HaloColor: {r: 0.9019608, g: 0.76862746, b: 0.9411765, a: 1}
+    - _LitColor: {r: 0.9490196, g: 0.72156864, b: 0.44705883, a: 1}
+    - _MouthCenter: {r: 0, g: 0.036, b: 0, a: 0}
+    - _MouthInsideColor: {r: 0.77, g: 0.58, b: 0.65, a: 1}
+    - _MouthLineColor: {r: 0.58, g: 0.50999993, b: 0.6, a: 1}
+    - _OutlineColor: {r: 0.45, g: 0.18, b: 0.22, a: 1}
+    - _RimLineColor: {r: 0.22745098, g: 0.14509805, b: 0.4, a: 1}
+    - _ShadowColor: {r: 0.6039216, g: 0.36078432, b: 0.5254902, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

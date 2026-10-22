@@ -1,0 +1,57 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# IDE and generated project files
+.idea/
+.vs/
+.vscode/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Build outputs
+[Bb]uild/
+[Bb]uilds/
+[Oo]utput/
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Crash reports
+sysinfo.txt
+*.stacktrace
+
+# Unity package exports
+*.unitypackage
+
+# Capture videos (Art/*/render) - large, shared via Notion instead
+Art/**/render/*.mp4
+
+# Tool auto-backups
+*.blend1
+*-autosave.kra
+
+# Blender backup files
+*.blend1
+
+# Unity 6.3 rebuild scratch (terrain/export dumps, import logs)
+Export/
+TerrainExport/
+*.log
