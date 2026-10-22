@@ -29,8 +29,8 @@ public class CatController : MonoBehaviour
     public float landSquash = 0.12f;
     public float moveLean = 8f;
     [Tooltip("Walk / run animation playback speed (the legs patter faster than the authored cycle).")]
-    public float walkAnimSpeed = 2.2f;
-    public float runAnimSpeed = 1.8f;
+    public float walkAnimSpeed = 1.3f;
+    public float runAnimSpeed = 1.9f;
 
     [Header("References")]
     public Animator animator;
@@ -137,7 +137,9 @@ public class CatController : MonoBehaviour
         _running = running;
         _planarSpeed = moving ? speed * move.magnitude : 0f;
         _moveAmount = Mathf.MoveTowards(_moveAmount, moving ? 1f : 0f, Time.deltaTime * 6f);
-        string state = !moving ? "SDCat_Idle" : (running ? "SDCat_Run" : "SDCat_Walk");
+        // the Blender run cycle (SDCat_Run, 17 frames) has the bigger leg and head motion, so it drives
+        // both walking and running; only its playback speed differs
+        string state = !moving ? "SDCat_Idle" : "SDCat_Run";
         PlayState(state);
         if (animator != null) animator.speed = !moving ? 1f : (running ? runAnimSpeed : walkAnimSpeed);
     }
