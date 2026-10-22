@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>밤이 오기 전 수확 — 2차 Unity 포트폴리오</title>
+<style>
+@page { size: 338.67mm 190.5mm; margin: 0; }
+:root {
+  --abyss: #06161F; --deep: #0E2640; --cyan: #62F2E1; --magenta: #FF74D8; --violet: #A08BFF; --gold: #FFD27A;
+  --ink: #1d2733; --muted: #5d6b78; --line: #dfe5ea; --paper: #ffffff; --tint: #f3f7f9;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #888; }
+body { font-family: "Malgun Gothic", "맑은 고딕", "Segoe UI", sans-serif; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.page { width: 338.67mm; height: 190.5mm; background: var(--paper); position: relative; overflow: hidden; page-break-after: always; break-after: page; padding: 13mm 15mm 11mm; }
+.page:last-child { page-break-after: auto; break-after: auto; }
+.tag { position: absolute; top: 9mm; right: 15mm; font-size: 9.5pt; color: var(--muted); letter-spacing: .02em; }
+.tag b { color: var(--deep); }
+.num { position: absolute; bottom: 6mm; right: 15mm; font-size: 8.5pt; color: var(--muted); }
+.step { display: inline-block; font-size: 9pt; font-weight: 700; color: #fff; background: var(--deep); border-radius: 3px; padding: 1.2mm 2.6mm; margin-bottom: 3mm; }
+.step.dev { background: #2d6f8f; } .step.res { background: #8a5a12; }
+h1 { font-size: 30pt; margin: 0 0 3mm; color: var(--deep); letter-spacing: -.01em; }
+h2 { font-size: 21pt; margin: 0 0 5mm; color: var(--deep); letter-spacing: -.01em; }
+h3 { font-size: 12.5pt; margin: 0 0 2mm; color: var(--deep); }
+p, li { font-size: 11pt; line-height: 1.6; margin: 0 0 2mm; }
+ul { margin: 0; padding-left: 5mm; }
+.muted { color: var(--muted); }
+.cols { display: grid; gap: 7mm; }
+.c2 { grid-template-columns: 1fr 1fr; } .c3 { grid-template-columns: 1fr 1fr 1fr; } .c4 { grid-template-columns: repeat(4, 1fr); }
+.c-l { grid-template-columns: 1.15fr 1fr; } .c-r { grid-template-columns: 1fr 1.25fr; }
+img { display: block; width: 100%; border-radius: 2mm; object-fit: cover; }
+figure { margin: 0; }
+figcaption { font-size: 9pt; color: var(--muted); margin-top: 1.5mm; line-height: 1.4; }
+.box { background: var(--tint); border: 1px solid var(--line); border-radius: 2.5mm; padding: 4mm 5mm; }
+table { width: 100%; border-collapse: collapse; font-size: 9.6pt; }
+th, td { border-bottom: 1px solid var(--line); padding: 2mm 2.4mm; text-align: left; vertical-align: top; line-height: 1.45; }
+th { background: var(--tint); color: var(--deep); font-weight: 700; }
+code, pre { font-family: Consolas, "D2Coding", monospace; }
+pre { background: #0f1b26; color: #dce8ee; border-radius: 2.5mm; padding: 3.5mm 4.5mm; font-size: 8.4pt; line-height: 1.42; margin: 0; white-space: pre-wrap; }
+pre .c { color: #8fd3c7; } pre .k { color: #ffcf7a; }
+.kbd { display: inline-block; border: 1px solid #b9c4cd; border-bottom-width: 2px; border-radius: 1.3mm; padding: .2mm 1.6mm; font-size: 9.5pt; background: #fff; font-family: Consolas, monospace; }
+.flow { display: flex; align-items: stretch; gap: 3mm; }
+.flow .n { flex: 1; background: var(--tint); border: 1px solid var(--line); border-radius: 2.5mm; padding: 3mm 3.5mm; font-size: 10pt; line-height: 1.45; }
+.flow .n b { display: block; color: var(--deep); font-size: 11pt; margin-bottom: 1mm; }
+.flow .a { align-self: center; color: var(--muted); font-size: 14pt; }
+/* cover */
+.cover { padding: 0; color: #fff; background: var(--abyss); }
+.cover img.bg { position: absolute; inset: 0; width: 100%; height: 100%; border-radius: 0; opacity: .78; }
+.cover .shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(6,22,31,.94) 0%, rgba(6,22,31,.80) 38%, rgba(6,22,31,.05) 70%); }
+.cover .in { position: absolute; left: 18mm; top: 22mm; width: 150mm; }
+.cover h1 { color: var(--gold); font-size: 40pt; margin-bottom: 2mm; }
+.cover .sub { font-size: 14pt; color: #d9eef0; margin-bottom: 10mm; }
+.cover .meta { font-size: 11pt; line-height: 1.9; color: #e7f3f4; }
+.cover .meta b { color: var(--cyan); display: inline-block; width: 26mm; }
+.cover .link { margin-top: 7mm; padding: 3.5mm 4.5mm; border: 1px solid var(--cyan); border-radius: 2.5mm; font-size: 12pt; color: #fff; background: rgba(98,242,225,.08); }
+.cover .link span { color: var(--cyan); font-weight: 700; }
+.pill { display: inline-block; font-size: 9pt; border-radius: 10mm; padding: .6mm 2.6mm; margin: 0 1mm 1mm 0; background: #e8f4f6; color: #1f5d6b; }
+</style>
+</head>
+<body>
+
+<!-- 1. 표지 -->
+<section class="page cover">
+  <img class="bg" src="img/26_cat_close.jpg" alt="">
+  <div class="shade"></div>
+  <div class="in">
+    <h1>밤이 오기 전 수확</h1>
+    <div class="sub">외계 행성 농장에서 바구니를 문 고양이가 손님의 주문을 채우는<br>Unity 3D 1스테이지 프로토타입</div>
+    <div class="meta">
+      <b>평가</b>제2차 성취도 평가 · Unity 게임 프로토타입 개발<br>
+      <b>이름</b>김기인<br>
+      <b>날짜</b>2026년 10월 22일<br>
+      <b>엔진</b>Unity 6 (6000.3) URP · Blender 5.2 · Claude Code
+    </div>
+    <div class="link"><span>GitHub</span>&nbsp; https://github.com/kki6700/harvest-before-night</div>
+    <div class="meta" style="margin-top:4mm;font-size:10pt">빌드 <code>02_Unity_김기인_빌드.zip</code> (HarvestBeforeNight.exe) · 플레이 영상 <code>02_Unity_김기인_플레이영상.mp4</code> (1분 22초)</div>
+  </div>
+</section>
+
+<!-- 2. 기획 의도 -->
+<section class="page">
+  <div class="tag"><b>기획 의도</b> · 포트폴리오 구성</div>
+  <span class="step">1 · 기획 의도</span>
+  <h2>직접 만든 외계 행성 배경 위에서, 짧고 분명한 한 판</h2>
+  <div class="cols c-l">
+    <div>
+      <p>1차 평가에서 만든 외계인 손님 · 등불 열매 · 가게 문과, 그 전부터 개인 프로젝트로 직접 만들어 온 외계 행성 들판(하늘, 구름, 지형, 수정, 버섯, 호수)이 있었습니다. 이 에셋들이 "살아 있는 곳"처럼 보이도록, 가장 단순한 농장 가게 놀이를 하나 얹었습니다.</p>
+      <p>플레이어는 바구니 손잡이를 입에 문 작은 고양이입니다. 밭에서 등불 열매와 버섯꽃을 수확해, 가게 문 앞에 차례로 찾아오는 손님의 주문을 채웁니다. 오후 2시에 시작해 밤 10시가 되면 끝나고, 그 사이 하늘이 실제로 저물어 남은 시간을 눈으로 느끼게 했습니다.</p>
+      <h3 style="margin-top:5mm">핵심 반복</h3>
+      <div class="flow">
+        <div class="n"><b>수확</b>익은 작물 앞에서 E — 고개를 숙여 수확하면 열매가 바구니로 날아감</div><div class="a">→</div>
+        <div class="n"><b>나르기</b>바구니는 12개까지. 가득 차면 손님에게</div><div class="a">→</div>
+        <div class="n"><b>건네기</b>주문에 필요한 만큼만 건네고, 남은 열매는 다음 손님 몫</div><div class="a">→</div>
+        <div class="n"><b>벌기</b>주문을 다 채우면 돈 + 보너스, 옷 색이 다른 다음 손님 등장</div>
+      </div>
+      <h3 style="margin-top:5mm">목표와 끝</h3>
+      <p>밤 10시 전에 <b>500원</b>을 벌면 성공, 그 전에 밤이 오면 실패입니다. 수확한 작물은 잠시 뒤 다시 자라서, 어떤 작물부터 수확할지 길을 고르는 재미가 생깁니다.</p>
+    </div>
+    <div>
+      <figure><img src="img/26_overview_day.jpg" style="height:62mm"><figcaption>스테이지 전경 — 밭 6개, 등불 열매 나무와 버섯꽃, 오른쪽 가게 문과 손님</figcaption></figure>
+      <div class="box" style="margin-top:4mm">
+        <h3>이렇게 정한 이유</h3>
+        <ul>
+          <li>1차 에셋과 직접 만든 에셋을 최대한 그대로 쓰면서 "왜 여기 있는지"가 보이게</li>
+          <li>조작은 이동과 E 하나 — 처음 해도 10초 안에 이해</li>
+          <li>시간 제한을 하늘 변화로 보여 줘서 UI 없이도 긴장감</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="num">2</div>
+</section>
+
+<!-- 3. 씬 구성: 에셋·프리팹 -->
+<section class="page">
+  <div class="tag"><b>씬 구성</b> · 에셋 임포트 · 프리팹화</div>
+  <span class="step dev">2 · 개발 과정</span>
+  <h2>1차 에셋과 직접 만든 에셋을 프리팹으로 정리해 한 장면에 모으기</h2>
+  <div class="cols c-r">
+    <div>
+      <table>
+        <tr><th style="width:30%">에셋</th><th>어디서</th><th>게임에서</th></tr>
+        <tr><td>외계 행성 들판</td><td>1차 이전 개인 프로젝트에서 직접 제작 (하늘 · 구름 · 지형 · 수정 · 버섯 · 호수 · 낮/밤)</td><td>배경 씬을 그대로 가져와 스테이지 바탕으로</td></tr>
+        <tr><td>밭</td><td>팀 프로젝트용으로 만든 두둑 + 칸 흙</td><td>2×2칸 밭 6개, 칸 24개</td></tr>
+        <tr><td>등불 열매 나무</td><td><b>1차 제출 에셋</b>을 다시 모델링 · 리그 · 수확 애니</td><td>수확하면 열매가 꽃봉오리로, 다시 열림</td></tr>
+        <tr><td>버섯꽃</td><td>팀 작물 에셋</td><td>수확하면 사라졌다 땅에서 다시 자람</td></tr>
+        <tr><td>외계인 손님</td><td><b>1차 제출 에셋</b> (얼굴 리토폴 · 옷 · 리그)</td><td>주문 손님, 옷 색만 바꿔 계속 등장</td></tr>
+        <tr><td>SD 고양이</td><td>1차 이전 개인 작업, 직접 박스 모델링 · 리그</td><td>플레이어 (IK/FK 다리, 질주 애니)</td></tr>
+        <tr><td>가게 문</td><td><b>1차 제출 에셋</b> (Varco 생성 후 정리)</td><td>손님이 나오고 들어가는 문</td></tr>
+        <tr><td>바구니</td><td>Varco(AI) 생성 후 정리</td><td>고양이 입의 바구니</td></tr>
+      </table>
+      <p class="muted" style="margin-top:3mm;font-size:9.5pt">모든 오브젝트는 프리팹으로 두고, 게임 스크립트(수확 · 납품 · 바구니)는 프리팹에 컴포넌트로 붙였습니다. 모델은 Blender에서 FBX로 내보내고 같은 GUID로 덮어써서, 모델을 고쳐도 씬 연결이 끊기지 않게 했습니다.</p>
+    </div>
+    <div>
+      <figure><img src="img/26_cat_close.jpg" style="height:56mm"><figcaption>플레이어 — 바구니 손잡이를 입에 문 SD 고양이</figcaption></figure>
+      <div class="cols c2" style="gap:3mm;margin-top:3mm">
+        <figure><img src="img/22_customers_pair.jpg" style="height:30mm"><figcaption>손님은 같은 캐릭터, 옷 색만 바뀜</figcaption></figure>
+        <figure><img src="img/24_mushroom_regrow.jpg" style="height:30mm"><figcaption>버섯꽃: 수확 → 사라짐 → 다시 자람</figcaption></figure>
+      </div>
+    </div>
+  </div>
+  <div class="num">3</div>
+</section>
+
+<!-- 4. 씬 구성: 조명·카메라·배경 -->
+<section class="page">
+  <div class="tag"><b>씬 구성</b> · 조명 · 카메라 · 배경</div>
+  <span class="step dev">2 · 개발 과정</span>
+  <h2>시간이 흐르는 하늘과 3인칭 카메라</h2>
+  <div class="cols c3" style="gap:4mm">
+    <figure><img src="img/26_overview_day.jpg" style="height:46mm"><figcaption>오후 2시 — 시작</figcaption></figure>
+    <figure><img src="img/26_overview_sunset.jpg" style="height:46mm"><figcaption>저녁 7시 — 해 질 녘</figcaption></figure>
+    <figure><img src="img/26_overview_night.jpg" style="height:46mm"><figcaption>밤 10시 — 끝. 수정과 버섯이 빛남</figcaption></figure>
+  </div>
+  <div class="cols c3" style="margin-top:5mm">
+    <div class="box">
+      <h3>조명 · 배경</h3>
+      <p>배경과 함께 직접 만든 낮/밤 시스템(태양 · 구름 빛 · 안개 · 포자 · 밤 후처리)을 게임 시계에 연결했습니다. 시간이 흐르면 하늘과 조명이 함께 저물어, 화면만 봐도 남은 시간을 알 수 있습니다.</p>
+    </div>
+    <div class="box">
+      <h3>카메라</h3>
+      <p>고양이 뒤 위쪽에서 따라가는 3인칭 카메라입니다. 마우스 오른쪽 드래그로 돌리고 휠로 줌합니다. 이동 방향은 카메라 기준이라 어느 쪽을 보든 W가 "화면 안쪽"입니다.</p>
+    </div>
+    <div class="box">
+      <h3>화면 정리</h3>
+      <ul>
+        <li>밭과 가게 문 앞을 풀 생성기의 제외 영역에 넣어 풀이 흙을 뚫지 않게</li>
+        <li>게임 화면 전체가 초록으로 물들던 색 문제를 찾아 해결 (9쪽)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="num">4</div>
+</section>
+
+<!-- 5. 플레이어 조작 -->
+<section class="page">
+  <div class="tag"><b>게임플레이</b> · 플레이어 조작 (이동 · 카메라)</div>
+  <span class="step dev">2 · 개발 과정</span>
+  <h2>고양이 조작과, 발이 미끄러지지 않는 달리기</h2>
+  <div class="cols c-l">
+    <div>
+      <table>
+        <tr><th style="width:34%">입력</th><th>동작</th></tr>
+        <tr><td><span class="kbd">W</span> <span class="kbd">A</span> <span class="kbd">S</span> <span class="kbd">D</span></td><td>카메라 기준 이동, 고양이가 이동 방향으로 돌아섬</td></tr>
+        <tr><td><span class="kbd">Shift</span></td><td>달리기</td></tr>
+        <tr><td><span class="kbd">E</span> / <span class="kbd">Space</span></td><td>익은 작물 수확 · 손님에게 납품 (가까이 있을 때 화면 아래 안내)</td></tr>
+        <tr><td>마우스 오른쪽 드래그 · 휠</td><td>카메라 회전 · 줌</td></tr>
+        <tr><td><span class="kbd">Esc</span> · <span class="kbd">R</span></td><td>일시 정지 · 처음부터</td></tr>
+      </table>
+      <h3 style="margin-top:5mm">애니메이션을 손본 과정</h3>
+      <ul>
+        <li>처음 SD 고양이는 다리가 뼈 하나라 진자처럼만 흔들려 발이 미끄러졌습니다.</li>
+        <li>Blender에서 다리를 두 마디 + 앞발 손목으로 나누고 IK/FK를 다시 리깅했습니다.</li>
+        <li>"박차고 달리는 고양이" 피드백에 맞춰, 땅을 차고 공중에서 쭉 뻗는 질주로 다시 짰습니다.</li>
+        <li>발이 땅을 미는 동안 몸이 같은 속도로 나아가도록, 게임에서 <b>이동 속도에 맞춰 애니메이션 속도</b>를 자동으로 정합니다.</li>
+        <li>다리를 늘리거나 접을 때 찌그러지는 곳은 웨이트를 다시 칠해 정리했습니다.</li>
+      </ul>
+    </div>
+    <div>
+      <figure><img src="img/23_dash_planted_side.jpg" style="height:34mm;object-fit:contain;background:#3a3a3a"><figcaption>질주 한 주기 (Blender 측면) — 뒷발로 박차고, 공중에서 뻗고, 앞발로 착지</figcaption></figure>
+      <figure style="margin-top:3mm"><img src="img/23_dash_planted_weights.jpg" style="height:40mm;object-fit:contain;background:#3a3a3a"><figcaption>웨이트 점검 — 다리를 가장 많이 뻗고 접은 프레임을 앞 · 뒤에서 확인</figcaption></figure>
+      <figure style="margin-top:3mm"><img src="img/09_cat_basket_mouth.jpg" style="height:30mm"><figcaption>바구니는 입 뼈에 붙어 흔들림 (색 수정 전 화면)</figcaption></figure>
+    </div>
+  </div>
+  <div class="num">5</div>
+</section>
+
+<!-- 6. 게임 규칙 -->
+<section class="page">
+  <div class="tag"><b>게임플레이</b> · 목표 · 획득 · 승리/실패</div>
+  <span class="step dev">2 · 개발 과정</span>
+  <h2>시작부터 끝까지 한 판의 흐름</h2>
+  <div class="flow" style="margin-bottom:5mm">
+    <div class="n"><b>시작 화면</b>이야기 · 조작법. 고양이는 멈춰 있음. Enter로 시작</div><div class="a">→</div>
+    <div class="n"><b>플레이</b>오후 2시 → 밤 10시를 3분에. 하늘이 함께 저묾. Esc로 일시 정지</div><div class="a">→</div>
+    <div class="n" style="border-color:#e8c27a"><b>성공</b>밤 전에 500원 달성 — 번 돈 · 손님 수 · 남은 시간</div>
+    <div class="n" style="border-color:#b8a8ff"><b>실패</b>밤 10시 도달 — 번 돈 · 손님 수</div><div class="a">→</div>
+    <div class="n"><b>다시 하기</b>R 또는 버튼으로 씬을 처음부터</div>
+  </div>
+  <div class="cols c-l">
+    <div>
+      <table>
+        <tr><th style="width:24%">규칙</th><th>내용</th></tr>
+        <tr><td>수확</td><td>익은 작물 앞에서 E. 등불 열매는 열매 3개, 버섯꽃은 1개. 바구니는 12개까지</td></tr>
+        <tr><td>다시 자람</td><td>등불 열매는 꽃봉오리로 돌아갔다 다시 열리고, 버섯꽃은 사라졌다가 땅에서 다시 솟아남</td></tr>
+        <tr><td>손님 주문</td><td>손님마다 열매 4~9개를 주문. 바구니에서 주문에 필요한 만큼만 가져감</td></tr>
+        <tr><td>돈</td><td>열매 1개 10원, 주문을 다 채우면 보너스 20원. 화면에 "+n원"</td></tr>
+        <tr><td>다음 손님</td><td>돈을 낸 손님은 가게로 들어가고, 옷 색이 다른 손님이 문에서 나옴</td></tr>
+        <tr><td>승패</td><td>밤 10시 전에 500원이면 성공, 아니면 실패</td></tr>
+      </table>
+      <p class="muted" style="margin-top:3mm;font-size:9.5pt">시연 모드로 한 판을 돌려 보면 약 1분 20초에 손님 6명을 받고 500원을 넘겨 성공했습니다.</p>
+    </div>
+    <div>
+      <figure><img src="img/25_play_b.jpg" style="height:56mm"><figcaption>주문을 다 채운 손님이 열매를 받는 장면</figcaption></figure>
+      <figure style="margin-top:3mm"><img src="img/22_customer_leave_seq.jpg" style="height:24mm"><figcaption>손님이 받고 → 일어서서 → 가게 문으로 돌아감</figcaption></figure>
+    </div>
+  </div>
+  <div class="num">6</div>
+</section>
+
+<!-- 7. UI -->
+<section class="page">
+  <div class="tag"><b>UI</b> · 점수 · 상태 · 결과 화면</div>
+  <span class="step dev">2 · 개발 과정</span>
+  <h2>게임 상태와 함께 움직이는 화면 UI</h2>
+  <div class="cols c4" style="gap:4mm">
+    <figure><img src="img/25_start.jpg" style="height:44mm"><figcaption><b>시작</b> — 이야기와 조작법, Enter 시작 버튼</figcaption></figure>
+    <figure><img src="img/25_play_a.jpg" style="height:44mm"><figcaption><b>플레이</b> — 시계 · 남은 시간 막대 · 돈 · 바구니 · 주문</figcaption></figure>
+    <figure><img src="img/25_won.jpg" style="height:44mm"><figcaption><b>성공</b> — 번 돈, 손님 수, 남은 시간</figcaption></figure>
+    <figure><img src="img/25_lost.jpg" style="height:44mm"><figcaption><b>실패</b> — 밤하늘 위에 결과와 다시 하기</figcaption></figure>
+  </div>
+  <div class="cols c3" style="margin-top:6mm">
+    <div class="box"><h3>상태와 연결된 것</h3>
+      <ul><li>시계 · 남은 시간 막대: 게임 시각에서 매 프레임</li><li>돈 · 막대: 손님이 돈을 낼 때 이벤트로</li><li>바구니: 수확 · 납품 때 이벤트로 (가득 차면 금색)</li></ul></div>
+    <div class="box"><h3>상황 안내</h3>
+      <ul><li>"E 수확하기", "E 납품하기 (주문 3/8)"처럼 할 수 있는 일만 아래에</li><li>손님이 없을 땐 "다음 손님이 오는 중이에요"</li><li>돈을 받는 순간 "+70원"이 떠오르며 사라짐</li></ul></div>
+    <div class="box"><h3>만든 방식</h3>
+      <p>UI는 코드로 생성해서 씬에는 컴포넌트 하나만 둡니다. 한글은 Windows 기본 글꼴(맑은 고딕), 색은 팀 팔레트(심연 · 시안 · 금빛 · 보라)를 썼습니다.</p></div>
+  </div>
+  <div class="num">7</div>
+</section>
+
+<!-- 8. AI 활용 개발 -->
+<section class="page">
+  <div class="tag"><b>AI 활용 개발</b> · 프롬프트 · 수정 내용 기록</div>
+  <span class="step dev">2 · 개발 과정</span>
+  <h2>AI 코딩 도구로 만든 과정</h2>
+  <div class="cols c-r">
+    <div>
+      <div class="box">
+        <h3>도구와 방식</h3>
+        <ul>
+          <li><b>Claude Code</b>에게 한국어로 요청하고, 결과를 플레이 화면으로 확인한 뒤 다시 요청</li>
+          <li>Unity는 MCP로 연결해 씬 배치 · 컴포넌트 · 플레이 테스트 · 빌드를 함께 진행</li>
+          <li>Blender는 백그라운드 스크립트로 리깅 · 애니메이션 · 렌더 확인</li>
+          <li>매 단계 요청, 결과, 오류, 고친 내용을 <code>Docs/DevLog.md</code>에 기록하고 이미지 26묶음을 <code>Docs/Media</code>에 남김</li>
+        </ul>
+      </div>
+      <div class="box" style="margin-top:4mm">
+        <h3>내가 정한 것 / AI가 한 것</h3>
+        <p>게임 방향, 조작감, 동작의 느낌("박차고 달리는 고양이", "손님은 옷 색만 바뀌게")은 제가 정하고, AI는 그것을 코드 · 리그 · 애니메이션으로 옮겼습니다. 결과가 마음에 들지 않으면 그 자리에서 이유를 말해 다시 고치게 했습니다.</p>
+      </div>
+    </div>
+    <div>
+      <table>
+        <tr><th style="width:40%">내 요청 (프롬프트)</th><th>AI가 만든 것 · 고친 것</th></tr>
+        <tr><td>새 프로젝트에서 씬 구성하자</td><td>직접 만든 배경 씬 + 밭 6개 + 작물 + 가게 문 · 손님 배치</td></tr>
+        <tr><td>고양이가 입에 바구니 손잡이 물고 가까이 가서 따는 걸로</td><td>CatController · CatHarvester · BasketFill, 입 뼈에 바구니 소켓</td></tr>
+        <tr><td>잔디가 밭을 뚫는 문제도 해결해 줘</td><td>풀 생성기 제외 영역에 밭 · 문 앞 추가 후 다시 생성</td></tr>
+        <tr><td>미사르에 가져와서 IK FK 제대로 리깅하지</td><td>다리 두 마디 + IK 컨트롤 + IK/FK 스위치, 앞발 손목 뼈</td></tr>
+        <tr><td>게임 씬에서 렌더하면 초록색이던데</td><td>후처리 볼륨의 색상 회전 값을 찾아 0으로</td></tr>
+        <tr><td>먼가 박차고 달리는 고양이를 상상했어</td><td>바운딩 갤럽 질주로 다시 짬, 늘어남 · 스케일 문제 제거</td></tr>
+        <tr><td>평가 쪽 이어 하자</td><td>GameDirector(시간 · 승패) · GameHUD(UI)</td></tr>
+        <tr><td>손님은 옷 색깔만 바뀌게 계속 나오고, 받으면 돈을</td><td>DeliveryPoint를 손님 순환 · 주문 · 돈으로</td></tr>
+        <tr><td>발이 계속 미끄러지니 애니메이션 해결해 줘</td><td>디딤 구간을 다시 짜고 재생 속도를 이동 속도에 맞춤</td></tr>
+        <tr><td>버섯꽃 수확하면 제거되고 자라는 것까지만</td><td>RipeCrop: 사라졌다 땅에서 다시 자람</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="num">8</div>
+</section>
+
+<!-- 9. 오류 분석 · 해결 -->
+<section class="page">
+  <div class="tag"><b>AI 활용 개발</b> · 오류 분석 · 해결 과정</div>
+  <span class="step dev">2 · 개발 과정</span>
+  <h2>AI 코드에서 나온 오류를 찾고 고친 기록</h2>
+  <div class="cols c-l">
+    <table>
+      <tr><th style="width:24%">증상</th><th style="width:38%">원인 (분석)</th><th>해결</th></tr>
+      <tr><td>고양이가 땅을 뚫고 끝없이 떨어짐</td><td>물리 충돌 설정에서 기본 레이어끼리 충돌이 꺼져 있었음</td><td>충돌 매트릭스에서 다시 켬</td></tr>
+      <tr><td>MissingComponentException</td><td>컴포넌트를 <code>??</code>로 가져옴 — Unity 오브젝트는 '가짜 null'이라 <code>??</code>가 통하지 않음</td><td><code>if (x == null)</code>로 바꿈</td></tr>
+      <tr><td>스크립트 하나만 컴파일에서 빠짐 (CS0246)</td><td>파일이 컴파일 목록에 등록되지 않음 — 메타 재생성으로도 안 됨</td><td>파일 · 클래스 이름을 바꿔 새로 등록</td></tr>
+      <tr><td>녹화 중 고양이가 수십 m 날아감</td><td>애니메이터가 바뀌지 않은 뼈를 다시 쓰지 않아, 코드로 더한 점프 값이 매 프레임 쌓임</td><td>지난 프레임 값이 그대로면 원래 자세로 되돌린 뒤 더함</td></tr>
+      <tr><td>게임 화면 전체가 초록</td><td>낮 후처리의 색상 회전(Hue Shift)이 -55°로 남아 있었음</td><td>0으로 — 보라 나무 · 주황 테두리 색이 돌아옴</td></tr>
+      <tr><td>UI 패널이 청록색</td><td>픽셀을 재 보니 색이 한 번 더 감마 보정됨 (#06161F → #1A5151)</td><td>팔레트를 선형 색으로 넣음</td></tr>
+      <tr><td>빌드 실패</td><td>URP 설정 에셋이 더 새 Unity에서 저장돼 버전 표시가 하나 높음</td><td>이 버전 기준으로 맞춰 빌드 성공</td></tr>
+      <tr><td>발이 미끄러짐</td><td>디딘 발이 땅을 미는 속도보다 몸이 2.5~3.5배 빠름, 앞발은 땅에 거의 닿지 않음, 클립 범위가 옛 설정</td><td>디딤을 다시 짜고, 재생 속도 = 이동 속도 ÷ 발 속도</td></tr>
+    </table>
+    <div>
+      <div class="cols c2" style="gap:3mm">
+        <figure><img src="img/18_game_colors_before.jpg" style="height:34mm"><figcaption>수정 전 — 색상 회전 때문에 초록</figcaption></figure>
+        <figure><img src="img/18_game_colors_fixed.jpg" style="height:34mm"><figcaption>수정 후 — 원래 팔레트</figcaption></figure>
+      </div>
+      <figure style="margin-top:3mm"><img src="img/17_crumple_fix_before_after.jpg" style="height:44mm;object-fit:contain;background:#3a3a3a"><figcaption>다리 찌그러짐 웨이트 수정 전(위) · 후(아래)</figcaption></figure>
+      <div class="box" style="margin-top:3mm"><p style="margin:0;font-size:10pt">AI가 처음 고친 방법이 틀린 적도 있었습니다. 예를 들어 웨이트를 전체적으로 풀었더니 찌그러짐이 오히려 늘어서, 숫자로 눌린 면을 세어 원인 위치를 찾은 뒤 그 부분만 고쳤습니다.</p></div>
+    </div>
+  </div>
+  <div class="num">9</div>
+</section>
+
+<!-- 10. 주요 코드 1 -->
+<section class="page">
+  <div class="tag"><b>AI 활용 개발</b> · 주요 코드 설명 (1)</div>
+  <span class="step dev">2 · 개발 과정</span>
+  <h2>GameDirector — 한 판의 상태와 시간</h2>
+  <div class="cols c-l">
+<pre><span class="c">// 상태: 시작 화면 → 플레이 → (일시 정지) → 성공 / 실패</span>
+<span class="k">public enum</span> State { Ready, Playing, Paused, Won, Lost }
+
+<span class="c">// 게임 시각: 경과 시간을 오후 2시 ~ 밤 10시로 바꿈</span>
+<span class="k">public float</span> Hour => Mathf.Lerp(startHour, endHour, Elapsed / roundSeconds);
+<span class="k">void</span> Update()
+{
+    <span class="k">switch</span> (Current)
+    {
+        <span class="k">case</span> State.Ready:                          <span class="c">// Enter로 시작</span>
+            <span class="k">if</span> (kb.enterKey.wasPressedThisFrame) Begin(); <span class="k">break</span>;
+        <span class="k">case</span> State.Playing:
+            <span class="k">if</span> (kb.escapeKey.wasPressedThisFrame) { Pause(<span class="k">true</span>); <span class="k">break</span>; }
+            Elapsed += Time.deltaTime;
+            dayNight.hour = Hour;                    <span class="c">// 배경의 낮/밤 시스템을 시계로 움직임</span>
+            <span class="k">if</span> (Elapsed >= roundSeconds) SetState(State.Lost);  <span class="c">// 밤 10시 = 실패</span>
+            <span class="k">break</span>;
+        <span class="k">case</span> State.Won: <span class="k">case</span> State.Lost:            <span class="c">// R로 다시 하기</span>
+            <span class="k">if</span> (kb.rKey.wasPressedThisFrame) Restart(); <span class="k">break</span>;
+    }
+}
+<span class="c">// 손님이 돈을 낼 때마다 불림 — 목표 금액이면 성공</span>
+<span class="k">void</span> OnPaid(<span class="k">int</span> coins, <span class="k">int</span> gained)
+{
+    <span class="k">if</span> (Current == State.Playing &amp;&amp; coins >= goal) SetState(State.Won);
+}
+<span class="k">void</span> SetState(State s)
+{
+    Current = s;
+    Time.timeScale = s == State.Paused ? 0f : 1f;    <span class="c">// 일시 정지는 시간을 멈춤</span>
+    cat.gameLocked = s != State.Playing;             <span class="c">// 플레이 중에만 고양이 조작</span>
+    StateChanged?.Invoke(s);                         <span class="c">// UI가 패널을 바꿈</span>
+}</pre>
+    <div>
+      <div class="box">
+        <h3>읽는 법</h3>
+        <ul>
+          <li>게임 전체를 <b>상태 하나</b>로 관리합니다. 키 입력도 상태마다 다르게 받습니다.</li>
+          <li>시간은 <code>Elapsed</code> 하나로 재고, 그걸 시각으로 바꿔 하늘에 넘깁니다. 시계 UI도 같은 값을 읽습니다.</li>
+          <li>승리는 "돈이 들어오는 순간"에만 확인합니다. 매 프레임 검사하지 않아 단순합니다.</li>
+          <li>상태가 바뀌면 이벤트를 보내고, UI는 그걸 듣고 패널을 켜고 끕니다. 규칙과 화면이 서로를 몰라도 됩니다.</li>
+        </ul>
+      </div>
+      <div class="box" style="margin-top:4mm">
+        <h3>고양이 잠금을 따로 둔 이유</h3>
+        <p style="margin:0">수확 동작은 끝날 때 고양이 잠금을 풉니다. 게임이 끝난 직후 수확이 마무리되면 결과 화면에서 고양이가 다시 움직였습니다. 그래서 게임 상태 전용 잠금(<code>gameLocked</code>)을 따로 두었습니다.</p>
+      </div>
+    </div>
+  </div>
+  <div class="num">10</div>
+</section>
+
+<!-- 11. 주요 코드 2 -->
+<section class="page">
+  <div class="tag"><b>AI 활용 개발</b> · 주요 코드 설명 (2)</div>
+  <span class="step dev">2 · 개발 과정</span>
+  <h2>손님 주문과, 발이 미끄러지지 않는 재생 속도</h2>
+  <div class="cols c2">
+<pre><span class="c">// DeliveryPoint — 고양이가 열매를 건넬 때</span>
+<span class="k">public int</span> Receive(<span class="k">int</span> amount)
+{
+    <span class="k">if</span> (!IsReady || amount <= 0) <span class="k">return</span> 0;   <span class="c">// 손님이 없으면 못 받음</span>
+    <span class="k">int</span> take = Mathf.Min(amount, Order - Filled); <span class="c">// 주문에 필요한 만큼만</span>
+    Filled += take;
+    Delivered += take;
+    customerAnimator.SetTrigger(<span class="k">"PickUp"</span>);      <span class="c">// 손님이 받는 동작</span>
+    <span class="k">if</span> (Filled >= Order) StartCoroutine(PayAndLeave());
+    <span class="k">return</span> take;                                  <span class="c">// 남은 건 바구니에 그대로</span>
+}
+
+IEnumerator PayAndLeave()
+{
+    <span class="k">int</span> gained = Order * pricePerFruit + orderBonus;
+    Coins += gained;
+    Paid?.Invoke(Coins, gained);                 <span class="c">// 승패 판정 · "+n원" UI</span>
+    <span class="c">// 받는 동작이 끝날 때까지 기다린 뒤 문으로 걸어감</span>
+    ...
+    NewLook();                                   <span class="c">// 코트 · 셔츠 · 바지 색만 바꿈</span>
+    NewOrder();                                  <span class="c">// 주문 4~9개</span>
+    <span class="k">yield return</span> WalkTo(_standPos);             <span class="c">// 문에서 걸어 나옴</span>
+}</pre>
+<pre><span class="c">// CatController — 달리기 애니메이션 재생 속도</span>
+<span class="c">// 디딘 발은 1배속에서 초당 pawGroundSpeed만큼 땅을 밉니다.</span>
+<span class="c">// 몸이 그 속도로 나아가면 발이 땅에 붙어 보이므로,</span>
+<span class="c">// 재생 속도 = 이동 속도 ÷ 발이 미는 속도</span>
+<span class="k">float</span> synced = _planarSpeed / Mathf.Max(0.05f, pawGroundSpeed);
+animator.speed = !moving ? 1f : Mathf.Max(0.5f, synced);
+
+<span class="c">// DeliveryPoint — 손님 걷기는 클립의 이동량(루트 모션)만큼만</span>
+<span class="k">void</span> OnAnimatorMove()
+{
+    <span class="k">if</span> (!_walking) <span class="k">return</span>;
+    <span class="k">float</span> step = customerAnimator.deltaPosition.magnitude;
+    Vector3 d = _walkTarget - transform.position; d.y = 0f;
+    <span class="c">// 길 방향으로만, 목표를 넘지 않게</span>
+    transform.position += d.normalized * Mathf.Min(step, d.magnitude);
+}
+
+<span class="c">// 옷 색 — 재질을 복사하지 않고 렌더러마다 색만 덮어씀</span>
+r.GetPropertyBlock(_mpb);
+_mpb.SetColor(LitId, m.GetColor(LitId) * c);
+_mpb.SetColor(ShadowId, m.GetColor(ShadowId) * c);
+r.SetPropertyBlock(_mpb);</pre>
+  </div>
+  <div class="box" style="margin-top:4mm"><p style="margin:0;font-size:10pt">손님은 캐릭터 하나를 계속 다시 씁니다. 받는 동작이 끝나기 전에 걷게 했더니 허리를 숙인 채 미끄러져 나가서, 애니메이터가 받는 동작을 벗어날 때까지 기다리도록 고쳤습니다. 걷기 시작 동작이 느리게 출발할 때도 몸이 같이 천천히 나가도록, 클립 자체의 이동량으로 움직입니다.</p></div>
+  <div class="num">11</div>
+</section>
+
+<!-- 12. 결과물 -->
+<section class="page">
+  <div class="tag"><b>결과물</b> · 실행 빌드 · 플레이 영상 · 저장소</div>
+  <span class="step res">3 · 결과물</span>
+  <h2>제출물과 돌아보기</h2>
+  <div class="cols c-l">
+    <div>
+      <table>
+        <tr><th style="width:24%">항목</th><th>내용</th></tr>
+        <tr><td>실행 빌드 (PC)</td><td><code>02_Unity_김기인_빌드.zip</code> — 압축을 풀고 <code>HarvestBeforeNight.exe</code> 실행 (Windows 64bit, 1920×1080). 시작 화면부터</td></tr>
+        <tr><td>플레이 영상</td><td><code>02_Unity_김기인_플레이영상.mp4</code> — 1분 22초. 빌드를 <code>-demo</code> 옵션으로 실행해 자동 시연을 Windows 녹화로 촬영</td></tr>
+        <tr><td>GitHub</td><td>https://github.com/kki6700/harvest-before-night — 프로젝트 전체, 스크립트, 개발 기록(<code>Docs/DevLog.md</code>), 과정 이미지</td></tr>
+        <tr><td>주요 스크립트</td><td>GameDirector · GameHUD · CatController · CatHarvester · DeliveryPoint · RipeCrop · BasketFill · FollowCamera · DemoAutopilot</td></tr>
+      </table>
+      <h3 style="margin-top:5mm">돌아보기</h3>
+      <ul>
+        <li><b>잘 된 것</b>: 1차 에셋과 직접 만든 에셋을 거의 그대로 살려 한 판이 처음부터 끝까지 돌아가는 게임이 됐습니다. 하늘이 저무는 것만으로 시간 압박이 전해집니다.</li>
+        <li><b>어려웠던 것</b>: 작은 SD 고양이의 발 미끄러짐. 느낌으로 고치다 막혀서, 발이 땅을 미는 속도를 숫자로 재고 나서야 풀렸습니다.</li>
+        <li><b>다음에</b>: 손님마다 다른 작물 주문, 효과음, 작물 성장 단계 모델, 난이도 조절을 더하고 싶습니다.</li>
+      </ul>
+    </div>
+    <div>
+      <figure><img src="img/25_won.jpg" style="height:60mm"><figcaption>성공 화면 — 손님 6명, 530원</figcaption></figure>
+      <figure style="margin-top:3mm"><img src="img/26_overview_night.jpg" style="height:48mm"><figcaption>밤 10시의 농장</figcaption></figure>
+    </div>
+  </div>
+  <div class="num">12</div>
+</section>
+
+</body>
+</html>

@@ -157,7 +157,7 @@ public class GameHUD : MonoBehaviour
         _ready = Panel(root, "Ready", new Vector2(0.5f, 0.5f), Vector2.zero, new Vector2(860, 560)).gameObject;
         Label(_ready.transform, "밤이 오기 전 수확", 64, Gold, TextAnchor.UpperCenter, new Vector2(0, -40), new Vector2(860, 80), true);
         Label(_ready.transform,
-            "가게 문 앞으로 외계인 손님들이 하나둘 찾아와요.\n바구니를 문 고양이가 되어 등불 열매와 버섯꽃을 따서 주문을 채우고\n밤 10시가 되기 전에 500원을 벌어 보세요.",
+            "가게 문 앞으로 외계인 손님들이 하나둘 찾아와요.\n바구니를 문 고양이가 되어 등불 열매와 버섯꽃을 수확해\n주문을 채우고, 밤 10시 전에 500원을 벌어 보세요.",
             28, Ink, TextAnchor.UpperCenter, new Vector2(0, -140), new Vector2(780, 140), true);
         Label(_ready.transform,
             "WASD 이동   ·   Shift 달리기   ·   E / Space 수확 · 납품\n마우스 오른쪽 드래그 카메라   ·   휠 줌   ·   Esc 일시 정지\n열매 1개 10원 · 주문을 다 채우면 보너스 20원 · 바구니는 12개까지",
