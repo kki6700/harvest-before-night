@@ -47,6 +47,8 @@ public class GameDirector : MonoBehaviour
         if (harvester == null) harvester = FindAnyObjectByType<CatHarvester>();
         if (delivery == null) delivery = FindAnyObjectByType<DeliveryPoint>();
         if (dayNight == null) dayNight = FindAnyObjectByType<DayNightBlend>();
+        // "-demo" on the command line: the cat plays by itself (for recording the play video)
+        if (Array.IndexOf(Environment.GetCommandLineArgs(), "-demo") >= 0) gameObject.AddComponent<DemoAutopilot>();
     }
 
     void Start()

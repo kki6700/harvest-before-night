@@ -79,8 +79,14 @@ public class CatHarvester : MonoBehaviour
             head.localRotation *= Quaternion.Euler(28f * _nod, 0f, 0f);
     }
 
-    static bool PressedAction()
+    bool _pressQueued;
+
+    /// <summary>Same as pressing E this frame (used by the demo autopilot).</summary>
+    public void PressAction() { _pressQueued = true; }
+
+    bool PressedAction()
     {
+        if (_pressQueued) { _pressQueued = false; return true; }
         var kb = Keyboard.current;
         return kb != null && (kb.eKey.wasPressedThisFrame || kb.spaceKey.wasPressedThisFrame);
     }

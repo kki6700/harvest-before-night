@@ -48,6 +48,8 @@ public class CatController : MonoBehaviour
     [HideInInspector] public bool gameLocked;
     /// <summary>Test hook: a non-zero value drives the cat like held movement keys (used for recording).</summary>
     [HideInInspector] public Vector2 debugInput;
+    /// <summary>Test / demo hook: run instead of walk.</summary>
+    [HideInInspector] public bool debugRun;
 
     CharacterController _cc;
     float _verticalSpeed;
@@ -115,7 +117,7 @@ public class CatController : MonoBehaviour
         bool locked = inputLocked || gameLocked;
         Vector2 input = locked ? Vector2.zero : ReadMoveInput();
         if (!locked && debugInput != Vector2.zero) input = debugInput;
-        bool running = !locked && Keyboard.current != null && Keyboard.current.leftShiftKey.isPressed;
+        bool running = !locked && ((Keyboard.current != null && Keyboard.current.leftShiftKey.isPressed) || debugRun);
 
         // move direction on the ground plane, relative to where the camera looks
         Vector3 forward = cameraTransform != null ? cameraTransform.forward : Vector3.forward;
