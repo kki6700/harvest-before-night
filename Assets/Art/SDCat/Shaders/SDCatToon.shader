@@ -24,10 +24,10 @@ Shader "DSEWA/SDCatToon"
         _RimMin ("Rim Start", Range(0, 1)) = 0.78
         _RimMax ("Rim End", Range(0, 1)) = 0.82
         _LightColorAmount ("Light Color Influence", Range(0, 1)) = 0
-        [Header(In Shadow (cloud or cast shadow))]
+        [Header(In Shadow cloud or cast shadow)]
         _ShadowFormLift ("Lit Side Lift In Shadow", Range(0, 1)) = 0
         _RimInShadow ("Rim In Shadow", Range(0, 1)) = 0
-        [Header(Drawn Mouth (mouth_sd_cat_shader.py))]
+        [Header(Drawn Mouth mouth_sd_cat_shader py)]
         _MouthCenter ("Mouth Center (rest x, z)", Vector) = (0, 0.036, 0, 0)
         _MouthSize ("Mouth Size", Float) = 0.03
         _MouthLineWidth ("Mouth Line Width", Float) = 0.007

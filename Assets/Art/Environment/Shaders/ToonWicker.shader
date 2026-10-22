@@ -29,7 +29,7 @@ Shader "DSEWA/ToonWicker"
         _WindStrength ("Wind Strength (m)", Float) = 0.04
         _WindSpeed ("Wind Speed", Float) = 1.6
         _WindFreq ("Wind Wave Frequency", Float) = 0.35
-        [Header(Relief (lit side detail, independent of cast shadow))]
+        [Header(Relief lit side detail independent of cast shadow)]
         _ReliefAmount ("Relief Amount", Range(0, 1)) = 0.4
         _ReliefSteps ("Relief Steps", Range(1, 4)) = 3
         _NormalInRamp ("Weave Normal In Toon Ramp", Range(0, 1)) = 0.6
@@ -39,7 +39,7 @@ Shader "DSEWA/ToonWicker"
         _RimMin ("Rim Start", Range(0, 1)) = 0.78
         _RimMax ("Rim End", Range(0, 1)) = 0.84
         _RimInShadow ("Rim In Shadow", Range(0, 1)) = 0.6
-        [Header(Emission (mask R lights up, tinted by the base colour))]
+        [Header(Emission mask R lights up tinted by the base colour)]
         [NoScaleOffset] _EmissionMap ("Emission Mask", 2D) = "black" {}
         [HDR] _EmissionColor ("Emission Color", Color) = (0, 0, 0, 1)
         _EmissionPulse ("Emission Breath (0 = steady)", Range(0, 1)) = 0

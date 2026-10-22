@@ -38,7 +38,7 @@ Shader "DSEWA/ToonProp"
         _RimStrength ("Rim Strength", Range(0, 1)) = 0.15
         _RimMin ("Rim Start", Range(0, 1)) = 0.78
         _RimMax ("Rim End", Range(0, 1)) = 0.84
-        [Header(Texture Glow (bright painted parts))]
+        [Header(Texture Glow bright painted parts)]
         _TexGlowStrength ("Texture Glow Strength (0 = off)", Range(0, 4)) = 0
         _TexGlowThreshold ("Brightness Where Glow Starts", Range(0, 1)) = 0.7
         _TexGlowSoftness ("Glow Edge Softness", Range(0.01, 0.5)) = 0.14

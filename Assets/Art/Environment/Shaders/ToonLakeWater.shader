@@ -34,7 +34,7 @@ Shader "DSEWA/ToonLakeWater"
         _GlintSizeRandom ("Glint Size Random (per cell)", Range(0, 1)) = 0.7
         _GlintCluster ("Glint Clustering (Musgrave patches)", Range(0, 1)) = 0.6
         _GlintClusterScale ("Cluster Patch Scale (per metre)", Range(0.01, 1)) = 0.12
-        [Header(Bed caustics in the shallows (Designer mask, double offset))]
+        [Header(Bed caustics in the shallows Designer mask double offset)]
         [NoScaleOffset] _CausticMap ("Caustic Mask (R, Designer)", 2D) = "black" {}
         _CausticTiling ("Caustic Tiles Per Metre", Range(0.02, 2)) = 0.25
         _CausticSpeed1 ("Set 1 Speed", Vector) = (0.03, 0.012, 0, 0)

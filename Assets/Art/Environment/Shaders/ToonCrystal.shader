@@ -39,7 +39,7 @@ Shader "DSEWA/ToonCrystal"
         _BrushValue ("Brightness Variation", Range(0, 0.6)) = 0
         _BrushEdge ("Shadow Edge Breakup", Range(0, 0.6)) = 0
         _BrushHue ("Hue Variation", Range(0, 0.1)) = 0
-        [Header(Rainbow Sheen (grazing facets))]
+        [Header(Rainbow Sheen grazing facets)]
         _SheenStrength ("Sheen Strength", Range(0, 2)) = 0.4
         _SheenPower ("Sheen Falloff", Range(0.5, 4)) = 1.3
         _Sheen0 ("Sheen 1", Color) = (1, 0.2, 0.8, 1)
@@ -51,11 +51,11 @@ Shader "DSEWA/ToonCrystal"
         _MatCapColor ("MatCap Tint", Color) = (1, 1, 1, 1)
         _MatCapStrength ("MatCap Strength", Range(0, 2)) = 0.5
         _MatCapInShadow ("MatCap In Shadow", Range(0, 1)) = 0.5
-        [Header(Edge Glow (vertex colour R))]
+        [Header(Edge Glow vertex colour R)]
         [ToggleUI] _EdgeFromVertexColor ("Use Vertex Colour R As Edge Mask", Float) = 0
         [HDR] _EdgeColor ("Edge Color", Color) = (0.6, 2.4, 2.2, 1)
         _EdgeStrength ("Edge Strength", Range(0, 2)) = 1
-        [Header(Cut Face Glow (vertex colour G, crystal_shards.py marks fracture faces))]
+        [Header(Cut Face Glow vertex colour G crystal_shards py marks fracture faces)]
         [ToggleUI] _CutFromVertexColor ("Use Vertex Colour G As Cut Mask", Float) = 0
         [HDR] _CutColor ("Cut Color", Color) = (1.2, 2.0, 2.4, 1)
         _CutStrength ("Cut Strength", Range(0, 2)) = 0.6
@@ -63,7 +63,7 @@ Shader "DSEWA/ToonCrystal"
         [HDR] _CoreColor ("Core Color", Color) = (0.25, 0.9, 1.0, 1)
         _CorePower ("Core Falloff", Range(0.5, 8)) = 2.5
         _CoreStrength ("Core Strength", Range(0, 2)) = 0.3
-        [Header(Texture Glow (bright parts of the Base Color glow))]
+        [Header(Texture Glow bright parts of the Base Color glow)]
         _TexGlowStrength ("Texture Glow Strength (0 = off)", Range(0, 4)) = 0
         _TexGlowThreshold ("Brightness Where Glow Starts", Range(0, 1)) = 0.55
         _TexGlowSoftness ("Glow Edge Softness", Range(0.01, 0.5)) = 0.15
@@ -74,7 +74,7 @@ Shader "DSEWA/ToonCrystal"
         _PulseBase ("Whole Glow Min / Max", Vector) = (0.85, 1.15, 0, 0)
         _PulseGlow ("Core + Cut + Edge Min / Max", Vector) = (0.45, 1.6, 0, 0)
         _PulseCell ("Beat Shared Within (m, 0 = per crystal)", Float) = 5
-        [Header(Radial Glow (lantern fruit style))]
+        [Header(Radial Glow lantern fruit style)]
         _RadialMix ("Core: Facing (0) / From The Foot (1)", Range(0, 1)) = 0.7
         _RadialPower ("Radial Falloff", Range(0.5, 6)) = 1.6
         _WaveStrength ("Wave Per Beat", Range(0, 2)) = 0.5

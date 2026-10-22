@@ -23,13 +23,13 @@ Shader "DSEWA/ToonFoliage"
         _PushStrength ("Cat Push Strength (m)", Float) = 0.6
         _WindRadius ("Wind Radius around the player (m, 0 = everywhere)", Float) = 25
         _WindFade ("Wind Fade Width (m)", Float) = 10
-        [Header(Color Controls (SurvivalKit MF_ColorControls order))]
+        [Header(Color Controls SurvivalKit MF_ColorControls order)]
         _Tint ("Tint", Color) = (1, 1, 1, 1)
         _Desaturation ("Desaturation (negative = more saturated)", Range(-1, 1)) = 0
         _HueShift ("Hue Shift (turns)", Range(-0.5, 0.5)) = 0
         _Brightness ("Brightness", Range(0, 3)) = 1
         _Contrast ("Cheap Contrast", Range(-0.5, 1)) = 0
-        [Header(Wind Colour (SurvivalKit MF_GrassWind))]
+        [Header(Wind Colour SurvivalKit MF_GrassWind)]
         _WindColor ("Wind Colour", Color) = (0.62, 0.94, 0.86, 1)   // pale mint, same family as the grass
         _WindColorAmount ("Wind Colour Amount", Range(0, 1)) = 0.5
         _WindColorScale ("Wind Colour Scale (1/m)", Float) = 0.35
@@ -40,23 +40,23 @@ Shader "DSEWA/ToonFoliage"
         _ShineColor ("Shine Colour", Color) = (0.85, 1, 0.95, 1)
         _ShineStrength ("Shine Strength", Range(0, 1)) = 0.25
         _ShinePower ("Shine Tip Falloff", Range(1, 8)) = 3
-        [Header(Ground Blend (RVT stand in from GroundColorBaker))]
+        [Header(Ground Blend RVT stand in from GroundColorBaker)]
         _GroundBlend ("Ground Blend", Range(0, 1)) = 1
         _GroundBlendHeight ("Ground Blend Height (0 root, 1 tip)", Range(0.01, 1)) = 0.35
         _GroundBlendCardShade ("Keep Card Shading", Range(0, 1)) = 0.15
-        [Header(Card Base (where the card meets the ground))]
+        [Header(Card Base where the card meets the ground)]
         _RootSink ("Sink Into Ground (m)", Range(0, 0.1)) = 0.02
         _RootErode ("Root Edge Erosion", Range(0, 1)) = 0.6
         _RootErodeHeight ("Erosion Height (0 root, 1 tip)", Range(0.01, 0.5)) = 0.18
         _RootErodeScale ("Erosion Noise Scale (uv x, y)", Vector) = (55, 9, 0, 0)
-        [Header(Grass Border (coverage baked by GroundColorBaker))]
+        [Header(Grass Border coverage baked by GroundColorBaker)]
         _EdgeShrink ("Shrink At Patch Edges", Range(0, 1)) = 1
         _EdgeShrinkMin ("Edge Min Scale", Range(0.05, 1)) = 0.35
         _EdgeShrinkRange ("Edge Coverage Range (lo, hi)", Vector) = (0.1, 0.6, 0, 0)
-        [Header(Clump Volume (sphere normal from the clump pivot))]
+        [Header(Clump Volume sphere normal from the clump pivot)]
         _Volume ("Volume (0 = flat up normal)", Range(0, 1)) = 0.6
         _VolumeHeightScale ("Volume Height Scale", Range(0.05, 2)) = 0.4
-        [Header(Variation (per clump and world patches))]
+        [Header(Variation per clump and world patches)]
         _ClumpHueVar ("Clump Hue Jitter (turns)", Range(0, 0.1)) = 0.025
         _ClumpValueVar ("Clump Brightness Jitter", Range(0, 0.5)) = 0.1
         _PatchTint ("Patch Tint (multiply)", Color) = (1.06, 1.0, 0.72, 1)
@@ -70,7 +70,7 @@ Shader "DSEWA/ToonFoliage"
         _SheenLean ("Blade Lean For Sheen", Range(0, 2)) = 0.8
         _TransColor ("Backlight Colour", Color) = (0.9, 1, 0.45, 1)
         _TransStrength ("Backlight Strength", Range(0, 1)) = 0.4
-        [Header(Tip Glow (bioluminescent night))]
+        [Header(Tip Glow bioluminescent night)]
         [HDR] _TipGlowColor ("Tip Glow Colour", Color) = (0.35, 0.5, 1.6, 1)
         _TipGlow ("Tip Glow Amount (0 off)", Range(0, 2)) = 0
         _TipGlowStart ("Tip Glow Start Height (0 root, 1 tip)", Range(0, 1)) = 0.65
@@ -227,12 +227,16 @@ Shader "DSEWA/ToonFoliage"
         half WindColorMask(float3 positionWS, half height)
         {
             half near = WindMask(positionWS.xz);
+            half mask = 0;
             UNITY_BRANCH
-            if (near <= 0) return 0;
-            float2 dir = normalize(_WindDir.xz + 1e-5);
-            float2 p = positionWS.xz * _WindColorScale - dir * _Time.y * _WindColorSpeed * _WindColorScale;
-            float n = ValueNoise2(p) * 0.65 + ValueNoise2(p * 2.3 + 17.1) * 0.35;
-            return smoothstep(_WindColorThreshold, _WindColorThreshold + _WindColorSoftness, n) * saturate(0.35 + height) * near;
+            if (near > 0)
+            {
+                float2 dir = normalize(_WindDir.xz + 1e-5);
+                float2 p = positionWS.xz * _WindColorScale - dir * _Time.y * _WindColorSpeed * _WindColorScale;
+                float n = ValueNoise2(p) * 0.65 + ValueNoise2(p * 2.3 + 17.1) * 0.35;
+                mask = smoothstep(_WindColorThreshold, _WindColorThreshold + _WindColorSoftness, n) * saturate(0.35 + height) * near;
+            }
+            return mask;
         }
 
         // Card base: near the root, vertical streak noise eats into the silhouette so the card does not end in a

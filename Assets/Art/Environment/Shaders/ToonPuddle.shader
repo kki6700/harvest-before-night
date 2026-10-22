@@ -30,14 +30,14 @@ Shader "DSEWA/ToonPuddle"
         _ReflectMax ("Reflection At Grazing Angles", Range(0, 1)) = 0.95
         _SkyReflection ("Sky Fallback Strength", Range(0, 2)) = 0.55
         _Alpha ("Water Opacity", Range(0, 1)) = 0.92
-        [Header(Ripples (Designer liquid noise, Art Materials PuddleRipples))]
+        [Header(Ripples Designer liquid noise Art Materials PuddleRipples)]
         [NoScaleOffset] _RippleMap ("Ripple Map (R caustic lines, G height)", 2D) = "black" {}
         _RippleScale ("Ripple Map Tiles Per Metre", Range(0.05, 3)) = 0.35
         _RippleSpeed ("Ripple Speed", Range(0, 2)) = 0.5
         _NormalStrength ("Ripple Strength", Range(0, 0.5)) = 0.145
         _CausticColor ("Line Color", Color) = (0.7, 0.95, 1, 1)
         _CausticStrength ("Line Strength", Range(0, 2)) = 0.7
-        [Header(Toon Water (flat body plus caustic highlight, used when Composition is 1))]
+        [Header(Toon Water flat body plus caustic highlight used when Composition is 1)]
         _ToonMode ("Composition (0 legacy reflection, 1 toon)", Range(0, 1)) = 1
         _WaterColor ("Water Color", Color) = (0.098, 0.722, 0.816, 1)
         _HighlightColor ("Highlight Color", Color) = (0.71, 0.973, 1, 1)
@@ -49,13 +49,13 @@ Shader "DSEWA/ToonPuddle"
         _GlowIntensity ("Glow Intensity", Range(0, 1)) = 0.2
         _EmissionIntensity ("Emission Intensity", Range(0, 2)) = 0.4
         _UVDistortion ("Caustic UV Distortion", Range(0, 0.05)) = 0.015
-        [Header(Caustic layers and scroll (debug switches))]
+        [Header(Caustic layers and scroll debug switches)]
         _CausticOn ("Caustic On", Range(0, 1)) = 1
         _SecondLayer ("Second Caustic Layer", Range(0, 1)) = 0
         _Scroll1 ("Scroll Layer 1", Range(0, 1)) = 1
         _Scroll2 ("Scroll Layer 2", Range(0, 1)) = 1
         _Layer1Weight ("Layer 1 Line Weight", Range(0, 1)) = 1
-        [Header(Flow like the URP Moon caustics decal (two copies drifting opposite, warped together))]
+        [Header(Flow like the URP Moon caustics decal two copies drifting opposite warped together)]
         _FlowMode ("Flow Mode (0 rotated layers, 1 Moon flow, 2 double offset)", Range(0, 2)) = 0
         _FlowTimeScale ("Flow Time Scale", Float) = 0.6
         _FlowDir ("Flow Direction (caustic UV per flow second)", Vector) = (0.18, 0.09, 0, 0)
@@ -63,7 +63,7 @@ Shader "DSEWA/ToonPuddle"
         _FlowDistort ("Flow Warp Strength (UV)", Range(0, 0.15)) = 0.05
         _FlowWarpScroll ("Flow Warp Scroll (UV per flow second)", Vector) = (0, 0.3, 0, 0)
         _DebugTime ("Debug Fixed Time (-1 = live)", Float) = -1
-        [Header(Double offset (Shader Graph tutorial two Tiling and Offset sets, used when Flow Mode is 2))]
+        [Header(Double offset Shader Graph tutorial two Tiling and Offset sets used when Flow Mode is 2)]
         _Speed1 ("Set 1 Speed (UV per second)", Vector) = (0.05, 0.02, 0, 0)
         _Speed2 ("Set 2 Speed (UV per second)", Vector) = (-0.03, 0.04, 0, 0)
         _Tiling2 ("Set 2 Tiling Multiplier (1 = tutorial copy)", Range(0.5, 2)) = 1

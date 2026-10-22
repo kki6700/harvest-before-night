@@ -27,13 +27,13 @@ Shader "DSEWA/ToonSky"
         _BandHeight ("Band Height", Range(0.005, 0.5)) = 0.08
         _BandAmount ("Band Amount", Range(0, 1)) = 0.8
         _Dither ("Gradient Dither", Range(0, 4)) = 1
-        [Header(Sunset Glow (horizon towards the sun))]
+        [Header(Sunset Glow horizon towards the sun)]
         _SunsetColor ("Sunset Colour (outer)", Color) = (1, 0.62, 0.43, 1)
         _SunsetHotColor ("Sunset Colour (at horizon)", Color) = (1, 0.79, 0.54, 1)
         _SunsetAmount ("Sunset Amount", Range(0, 1)) = 0
         _SunsetHeight ("Sunset Height", Range(0.01, 1)) = 0.25
         _SunsetSpread ("Sunset Azimuth Falloff (higher = narrower)", Range(0.5, 16)) = 3
-        [Header(Volumetric Cloud Layer (toon raymarch overhead))]
+        [Header(Volumetric Cloud Layer toon raymarch overhead)]
         _VolAmount ("Volumetric Amount", Range(0, 1)) = 0
         _VolBottom ("Layer Bottom (m)", Float) = 1200
         _VolTop ("Layer Top (m)", Float) = 1900
@@ -71,7 +71,7 @@ Shader "DSEWA/ToonSky"
         [Toggle] _VolDebugMask ("Debug: cloud silhouette only (white on black)", Float) = 0
 
         [Header(Sun)]
-        [Header(Stars (night))]
+        [Header(Stars night)]
         _StarAmount ("Star Amount (0 day .. 1 night)", Range(0, 1)) = 0
         [HDR] _StarColor ("Star Colour", Color) = (0.9, 0.94, 1, 1)
         _StarScale ("Star Grid (higher = smaller, more)", Float) = 160
@@ -86,7 +86,7 @@ Shader "DSEWA/ToonSky"
         _StarBlink ("Twinkle: Speed Min, Speed Max (rad/s), Blinking Share, Blink Depth", Vector) = (1, 4, 0, 0)
         _StarBandBoost ("More Stars near the Galaxy Band", Range(0, 4)) = 0
 
-        [Header(Galaxy band (night))]
+        [Header(Galaxy band night)]
         _GalaxyPlane ("Galaxy Band Circle Normal (xyz world), w = half width (deg)", Vector) = (0.5, 0.6, 0.6, 12)
         _GalaxyAmount ("Galaxy Band Amount (0 off)", Range(0, 1)) = 0
         [NoScaleOffset] _GalaxyMap ("Galaxy Maps (R spiral, G flocculent, B clumps, A dust lanes; GalaxyMaps.sbs)", 2D) = "black" {}
@@ -98,13 +98,13 @@ Shader "DSEWA/ToonSky"
         _GalaxySteps ("Toon Step Count", Range(2, 6)) = 3
         _GalaxyDrift ("Motion: Clump Drift, Dust Drift (per s, along the band), Clump Shimmer, Galaxy Spin (rad/s)", Vector) = (0, 0, 0, 0)
 
-        [Header(Galaxies (night))]
+        [Header(Galaxies night)]
         _GalBig ("Big Galaxy: Dir (xyz world), Size (rad)", Vector) = (0.3, 0.6, 0.7, 0.25)
         _GalBigShape ("Big Galaxy: Roll (rad), Tilt (1 face-on .. 0.1 edge-on), Type (0 spiral, 1 flocculent), Brightness", Vector) = (0.4, 0.45, 0, 0)
         _GalGroup ("Galaxy Group: Centre Dir (xyz world), Spread (rad)", Vector) = (0.2, 0.7, 0.7, 0.2)
         _GalGroupCfg ("Galaxy Group: Count (0..6), Size Min, Size Max (rad), Brightness", Vector) = (0, 0.012, 0.035, 0.6)
 
-        [Header(Planet (alien sky))]
+        [Header(Planet alien sky)]
         _PlanetAmount ("Planet Amount (0 off)", Range(0, 1)) = 0
         _PlanetSkyDraw ("Draw Ringed Planet + Moons 2, 4 Here (0 = 3D meshes by SkyRingedPlanet)", Range(0, 1)) = 1
         _PlanetDir ("Planet Direction (world)", Vector) = (0.3, 0.45, 0.85, 0)
@@ -132,7 +132,7 @@ Shader "DSEWA/ToonSky"
         _BodyHaze ("Bodies: Atmospheric Perspective (sky colour over them)", Range(0, 1)) = 0
         _BodyHazeLow ("Bodies: Extra Haze Near the Horizon", Range(0, 1)) = 0
 
-        [Header(Giant Planet (rising from the horizon))]
+        [Header(Giant Planet rising from the horizon)]
         _GiantAmount ("Giant Amount (0 off)", Range(0, 1)) = 0
         _GiantDir ("Giant Direction (world)", Vector) = (-0.6, 0.03, 0.8, 0)
         _GiantSize ("Giant Radius (rad)", Range(0.05, 1.2)) = 0.5
@@ -145,7 +145,7 @@ Shader "DSEWA/ToonSky"
         _GiantRimWidth ("Giant Rim Width (radii)", Range(0, 0.3)) = 0.04
         _GiantAxis ("Giant Spin Axis (tilt to viewer, roll on screen; rad)", Vector) = (0.35, -0.2, 0, 0)
         _PlanetAxisSign ("Ringed Planet Axis Side (1 or -1, matches the ring)", Float) = 1
-        [Header(Motion (our planet stays still and the others turn))]
+        [Header(Motion our planet stays still and the others turn)]
         _GiantSpin ("Giant Spin (rad per s)", Float) = 0
         _GiantStorm ("Giant Storm Spot (shows the spin)", Range(0, 1)) = 0
         _StormColor ("Storm Spot Colour", Color) = (0.95, 0.55, 0.75, 1)

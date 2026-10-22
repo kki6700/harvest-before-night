@@ -28,7 +28,7 @@ Shader "DSEWA/ToonLiquid"
         _RimPower ("Rim Falloff", Range(0.5, 8)) = 3
         _FoamWidth ("Surface Edge Line Width (m)", Range(0, 0.03)) = 0.006
         [HDR] _FoamColor ("Surface Edge Line Color", Color) = (0.8, 1.6, 1.6, 1)
-        [Header(Wobble (set by LiquidWobble.cs))]
+        [Header(Wobble set by LiquidWobble cs)]
         _WobbleX ("Wobble X (surface slope)", Range(-1, 1)) = 0
         _WobbleZ ("Wobble Z (surface slope)", Range(-1, 1)) = 0
         [HideInInspector] _LiquidBox ("Liquid Box (set by script)", Vector) = (0, 0, 0, 0)

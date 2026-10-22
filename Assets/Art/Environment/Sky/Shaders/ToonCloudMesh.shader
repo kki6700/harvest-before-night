@@ -18,7 +18,7 @@ Shader "DSEWA/ToonCloudMesh"
         _ShadeNoiseAmount ("Shade Lobes Amount", Range(0, 0.5)) = 0.12
         _BottomShade ("Flat Bottom Shade (underside darker)", Range(0, 1)) = 0.35
 
-        [Header(Colours (used when CloudSunLight does not publish globals))]
+        [Header(Colours used when CloudSunLight does not publish globals)]
         _LitColor ("Lit", Color) = (1, 1, 1, 1)
         _ShadowColor ("Shadow", Color) = (0.62, 0.66, 0.86, 1)
 

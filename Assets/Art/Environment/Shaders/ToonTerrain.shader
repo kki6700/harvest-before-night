@@ -28,16 +28,16 @@ Shader "DSEWA/ToonTerrain"
         _ShadowBlur ("Cast Shadow Smoothing (texels, 0 = URP)", Range(0, 4)) = 1.5
         _AmbientShade ("Ambient Shade", Range(0, 1)) = 0.105
         _BumpScale ("Normal Strength", Float) = 1
-        [Header(Random Tiling (hex grid))]
+        [Header(Random Tiling hex grid)]
         [Toggle] _HexEnable ("Randomize Tiling", Float) = 1
         _HexCellSize ("Cell Size (tiles)", Range(0.25, 4)) = 1
         _HexRotation ("Random Rotation", Range(0, 1)) = 1
         _HexSharpness ("Cell Edge Sharpness", Range(1, 32)) = 8
-        [Header(Height Blend (layer mask map B))]
+        [Header(Height Blend layer mask map B)]
         [Toggle] _HeightBlend ("Height Blend", Float) = 1
         _HeightBlendScale ("Height Influence", Range(0, 1)) = 0.5
         _HeightBlendWidth ("Blend Edge Width", Range(0.005, 0.5)) = 0.05
-        [Header(Grass Border (coverage baked by GroundColorBaker))]
+        [Header(Grass Border coverage baked by GroundColorBaker)]
         _GrassTintColor ("Ground Tint Under Grass (multiply)", Color) = (0.62, 0.54, 0.86, 1)
         _GrassTintAmount ("Ground Tint Amount", Range(0, 1)) = 1
         _GrassTintRange ("Ground Tint Range (coverage lo, hi)", Vector) = (0.03, 0.55, 0, 0)
