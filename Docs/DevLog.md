@@ -7,3 +7,12 @@
 - `Stage1` 씬: 배경 씬(하늘 · 구름 · 지형 · 안개 · 크리스탈 · 버섯 · 호수 · 낮/밤 전환)을 바탕으로 테스트 물체 정리, 밭 6개(4 × 4 m, 칸 24) + 등불 열매 · 버섯꽃(완성 / 자라는 중 섞음), 플레이어 = SD 고양이(Idle / Walk / Run 애니), 3인칭 카메라, 시작 시각 오후 2시.
 - 외계인 손님(Cunsumer, 1차 직접 제작: 얼굴 리토폴 · 옷 · 21본 리그 · Mixamo 걷기 · 툰 셰이더)을 납품 상대로: 가게 문 · 손님 · 바구니를 함께 밭 오른쪽 옆(문 (12.5, 0, -6.5))으로 옮기고 플레이어 시작점 쪽을 보게 돌림. 처음 (9.5, 0, -1.5)은 밭과 겹쳐서 다시 옮김.
 - 콘솔 에러 정리: (1) 1차 · 팀 복사본이 같은 GUID를 가진 파일 7개(꽃 등불 열매 모델 · 재질, 수확 아이템)가 Unity DB에서 다른 GUID로 등록돼 배경 씬 프리팹이 끊김 → 폴더를 잠깐 빼고 다시 넣어 원래 GUID로 재등록, 프로젝트 전체 DB/meta GUID 불일치 0 확인. (2) 열리지 않는 6000.6 지형 파일 2개(안 쓰임) 삭제. (3) URP 전역 설정에 남은 최신 URP 전용 타입 6개 제거(ClearAllManagedReferencesWithMissingTypes). (4) 셰이더 Properties의 Header 문구에 쉼표 · 괄호가 있어 drawer 생성 실패 → 영문자 · 숫자만 남김. 처음에 -, / 로 바꿨다가 셰이더 13개가 파싱 에러(이름 빈칸, 지형이 안 그려짐) → 원본으로 되돌리고 다시 정리. (5) ToonFoliage 경고(조기 return으로 초기화 안 된 변수) → if 블록으로 바꿈. (6) 구름 3D 텍스처 이름 불일치 수정. 플레이 모드 에러 · 경고 0.
+
+## 10/22 플레이어 · 수확 (AI 코딩: Claude Code)
+- 요청(프롬프트): "고양이가 입에 바구니 손잡이 물고 가까이 가서 따는 걸로" / "잔디가 밭을 뚫는 문제도 해결".
+- 스크립트(Assets/Scripts/Gameplay): `CatController`(WASD · Shift 달리기, 카메라 기준 이동, CharacterController, 상태 이름으로 Idle/Walk/Run 재생), `FollowCamera`(뒤 위 3인칭, 우클릭 드래그 회전 · 휠 줌), `RipeCrop`(익은 작물: 등불 열매는 Animator 트리거 Harvest/Regrow, 버섯꽃은 크기 줄였다 다시 자람), `CatHarvester`(가까운 익은 작물 찾기 → E/Space로 수확: 멈추고 작물 쪽으로 돌아 고개를 숙였다 들고, 열매가 포물선으로 바구니에 들어감, 정원 12), `BasketFill`(바구니 안 열매 90개를 아래부터 채워 보이기), `DeliveryPoint`(외계인 손님 납품).
+- 바구니: 1차에서 만든 `CarriedBasket`(손 소켓 + 진자 흔들림)을 재사용, 손 대신 고양이 입 뼈(mouth_mid) 앞 16 cm `MouthGrip`에 손잡이를 걸고 0.42배.
+- 오류 1: `HarvestableCrop.cs`만 컴파일 목록(Assembly-CSharp.rsp)에서 빠져 CS0246 → meta 재생성 · 강제 재컴파일로도 안 돼서 파일 · 클래스 이름을 `RipeCrop`으로 바꿔 해결.
+- 오류 2: `??` 연산자로 컴포넌트를 가져오다 MissingComponentException (Unity 오브젝트의 가짜 null) → `if (x == null)`로 변경.
+- 오류 3: 플레이 중 고양이가 땅을 뚫고 -600 m까지 떨어짐 → 원인은 물리 충돌 매트릭스에서 Default-Default 충돌이 꺼져 있던 것(1차 프로젝트 설정). 다시 켬.
+- 잔디: 지형 잔디 생성기(LayerGrassSpawner)의 제외 영역에 밭 6개 · 가게 문 앞 박스를 넣고 다시 생성 → 밭 안 잔디 0.
