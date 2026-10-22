@@ -28,17 +28,24 @@ public class CatController : MonoBehaviour
     [Tooltip("Squash on landing (fraction of height) and forward lean while moving (degrees).")]
     public float landSquash = 0.12f;
     public float moveLean = 8f;
-    [Tooltip("Walk / run animation playback speed (the legs patter faster than the authored cycle).")]
+    [Tooltip("Walk / run animation playback speed when syncAnimToSpeed is off.")]
     public float walkAnimSpeed = 1.3f;
     public float runAnimSpeed = 1.9f;
+    [Tooltip("Play the run cycle at move speed / pawGroundSpeed so planted paws do not slide.")]
+    public bool syncAnimToSpeed = true;
+    [Tooltip("How fast a planted paw moves back in SDCat_Run at 1x (m/s), measured on the imported clip.")]
+    public float pawGroundSpeed = 0.76f;
 
     [Header("References")]
     public Animator animator;
     [Tooltip("Camera the input is relative to. Empty = Camera.main.")]
     public Transform cameraTransform;
 
-    /// <summary>Set by other systems (harvesting, game over) to freeze the cat for a moment.</summary>
+    /// <summary>Set by other systems (harvesting) to freeze the cat for a moment.</summary>
     public bool inputLocked;
+    /// <summary>Set by the GameDirector before the start and after the result; kept apart from inputLocked
+    /// so a harvest that finishes after the round ends cannot unlock the cat again.</summary>
+    [HideInInspector] public bool gameLocked;
     /// <summary>Test hook: a non-zero value drives the cat like held movement keys (used for recording).</summary>
     [HideInInspector] public Vector2 debugInput;
 
@@ -105,9 +112,10 @@ public class CatController : MonoBehaviour
 
     void Update()
     {
-        Vector2 input = inputLocked ? Vector2.zero : ReadMoveInput();
-        if (!inputLocked && debugInput != Vector2.zero) input = debugInput;
-        bool running = !inputLocked && Keyboard.current != null && Keyboard.current.leftShiftKey.isPressed;
+        bool locked = inputLocked || gameLocked;
+        Vector2 input = locked ? Vector2.zero : ReadMoveInput();
+        if (!locked && debugInput != Vector2.zero) input = debugInput;
+        bool running = !locked && Keyboard.current != null && Keyboard.current.leftShiftKey.isPressed;
 
         // move direction on the ground plane, relative to where the camera looks
         Vector3 forward = cameraTransform != null ? cameraTransform.forward : Vector3.forward;
@@ -137,11 +145,16 @@ public class CatController : MonoBehaviour
         _running = running;
         _planarSpeed = moving ? speed * move.magnitude : 0f;
         _moveAmount = Mathf.MoveTowards(_moveAmount, moving ? 1f : 0f, Time.deltaTime * 6f);
-        // the Blender run cycle (SDCat_Run, 17 frames) has the bigger leg and head motion, so it drives
-        // both walking and running; only its playback speed differs
+        // the dash cycle (SDCat_Run) drives walking and running. Its planted paws push the ground back at
+        // pawGroundSpeed at 1x, so playing it at (move speed / pawGroundSpeed) keeps a planted paw still on
+        // the ground (user: "the feet keep sliding" - fixed rates of 1.6x / 2.2x slid 2.5-3.5 times too fast)
         string state = !moving ? "SDCat_Idle" : "SDCat_Run";
         PlayState(state);
-        if (animator != null) animator.speed = !moving ? 1f : (running ? runAnimSpeed : walkAnimSpeed);
+        if (animator != null)
+        {
+            float synced = _planarSpeed / Mathf.Max(0.05f, pawGroundSpeed);
+            animator.speed = !moving ? 1f : (syncAnimToSpeed ? Mathf.Max(0.5f, synced) : (running ? runAnimSpeed : walkAnimSpeed));
+        }
     }
 
     static Vector2 ReadMoveInput()

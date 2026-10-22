@@ -53,19 +53,22 @@ public class CatHarvester : MonoBehaviour
     void Update()
     {
         if (_busy) return;
+        if (_controller.gameLocked) { Prompt = ""; return; }
 
         DeliveryPoint delivery = NearestDelivery();
         RipeCrop crop = delivery == null ? NearestRipeCrop() : null;
 
         if (delivery != null)
-            Prompt = Carried > 0 ? "E  납품하기" : "바구니가 비었어요";
+            Prompt = !delivery.IsReady ? "다음 손님이 오는 중이에요"
+                   : Carried > 0 ? string.Format("E  납품하기  (주문 {0} / {1})", delivery.Filled, delivery.Order)
+                   : "바구니가 비었어요";
         else if (crop != null)
             Prompt = IsFull ? "바구니가 가득 찼어요 — 손님에게 가져가요" : "E  수확하기";
         else
             Prompt = "";
 
         if (!PressedAction() || _controller.inputLocked) return;
-        if (delivery != null && Carried > 0) StartCoroutine(DeliverRoutine(delivery));
+        if (delivery != null && delivery.IsReady && Carried > 0) StartCoroutine(DeliverRoutine(delivery));
         else if (crop != null && !IsFull) StartCoroutine(HarvestRoutine(crop));
     }
 
@@ -146,10 +149,9 @@ public class CatHarvester : MonoBehaviour
         _controller.inputLocked = true;
         Prompt = "";
         yield return Nod(0f, 1f, 0.2f);
-        int amount = Carried;
-        Carried = 0;
+        int took = delivery.Receive(Carried);      // the customer takes only what the order still needs
+        Carried -= took;
         UpdateBasket();
-        delivery.Receive(amount);
         yield return Nod(1f, 0f, 0.2f);
         _controller.inputLocked = false;
         _busy = false;
